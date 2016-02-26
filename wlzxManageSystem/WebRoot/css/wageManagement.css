@@ -1,0 +1,47 @@
+/*工资管理上部检索框及按钮*/
+.wage .search {
+	margin-left: 300px;
+	margin-top: 65px;
+	margin-bottom: -20px;
+}
+.wage .button{
+	display: inline-block;
+}
+.wage .sureGenerate{
+	margin-top: 20px;
+	margin-left: 400px;
+}
+.wage .generate-month-wage input{
+	width: 120px;
+	margin-left: 425px;
+}
+
+/*中部多选框*/
+.wage select {
+	height: 30px;
+	width: 180px;
+	margin-left: 10px;
+	margin-right: 20px;
+}
+
+/*中下部翻页*/
+.wage .changePage {
+	display: inline-block;
+	margin-left: 100px;
+	margin-top: 10px;
+}
+
+.wage .changePage a {
+	color: #06f;
+	padding:0 15px;
+}
+
+.wage .changePage span {
+	padding-left: 485px;
+}
+
+/*下部生成按钮*/
+.wage .confirm{
+	margin-top: 50px;
+	margin-left: 410px;
+}

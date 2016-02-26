@@ -1,0 +1,57 @@
+/*中部内容区*/
+.content{
+	margin-top: 100px;
+	width: 580px;
+	height: 585px;
+}
+.mes_title{
+	font-size: 16px;
+	color:#666;
+}
+/*表单信息*/
+.content form{
+	line-height: 40px;
+	width: 600px;
+}
+.content form select{
+	width:100px;
+	height:30px;
+	padding:0;
+	border:1px solid #ccc;
+}
+.content form label{
+	margin-right: 8px;
+	margin-left: 3px;
+	color:#666;
+}
+label em{color:red;font-style:normal;}
+.content form .inputText{
+	width:180px;
+	height:30px;
+	border:1px solid #ccc;
+	margin-right: 15px;
+	padding-left:10px;
+}
+
+.content form .sex{
+	padding-right: 15px;
+}
+.content form .age{
+	margin-left: 141px;
+}
+.content form .interest{
+	padding-left: 35px;
+}
+
+.content form .interestSecond{
+	padding-left: 58px;
+}
+.tips{color:#999;font-size:12px;width:242px;line-height: 16px;}
+/*下一步*/
+.next{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+/*中部内容区结束*/

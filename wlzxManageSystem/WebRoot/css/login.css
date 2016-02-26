@@ -1,0 +1,49 @@
+/*中部内容区*/
+.content{
+	width: 1349px;
+	height: 683px;
+	background: url("../images/login/bg.jpg") no-repeat;
+	text-align: center;
+}
+
+.content img{
+	margin-top: 155px;
+}
+
+.content .inputText{
+	width: 180px;
+	height: 15px;
+	line-height: 15px;
+	margin-bottom: 20px;
+	padding: 10px 0 10px 30px;
+	border: 1px solid #999;
+}
+
+.content .user{
+	margin-top: 20px;
+	background: url("../images/login/user.png") no-repeat;
+	background-position:center left;
+	background-color: white;
+}
+
+.content .password{
+	background: url("../images/login/password.png") no-repeat;
+	background-position:center left;
+	background-color: white;
+}
+
+/*登录*/
+.login input{
+	display: block;
+	background-color: #0066ff;
+	width: 215px;
+	height: 35px;
+	line-height: 35px;
+	color: white;
+	text-align: center;
+	border:none;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+/*中部内容区结束*/

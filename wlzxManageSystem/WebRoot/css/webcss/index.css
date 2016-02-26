@@ -1,0 +1,51 @@
+/*Written by tmn*/
+/*子导航*/
+.subnav a{color:#4b4b4b;padding:0 0;}
+.subnav a span{padding-left:7px;}
+
+/*包围中部图片展示及右边的部门动态、团队介绍*/
+.banner{height:340px;border:1px solid #ccc;margin-top:15px;}
+
+/*中部图片展示*/
+.picture_roll{width:630px;height:340px;overflow:hidden;position:relative;}
+.picture_roll .list{width:6300px;height:294px;position:absolute;z-index:1;}
+.picture_roll .list img{float:left;cursor:pointer;}
+.picture_roll .buttons{position:absolute;height:8px;width:120px;z-index:2;bottom:30px; right:25px;}
+.picture_roll .buttons span{cursor:pointer;float:left;width:8px;height:8px; border-radius:50%;background:#F8F6F9;margin-right:5px;}
+.picture_roll .buttons .on{background:#0069FA;}
+
+/*包围右边栏，即部门动态、团队介绍*/
+.sidebar{padding:20px 35px;}
+.department_dynamic{background:url(../../images/webimg/index/banner/department_bg.png);width:265px;height:24px;padding:0 8px;margin-bottom:5px;}
+.department_dynamic span{padding-left:40px;}
+.sidebar li{line-height:25px;}
+.sidebar li a{color:#666;}
+.sidebar li a:hover{color:#99BE4D;}
+.sidebar img{margin-right:5px;}
+.team_introduce{width:278px;height:26px;border:1px solid #ccc;padding:7px 0;margin:4px 0 18px 0;}
+.team_introduce_text{padding:0 50px;}
+.team_introduce_icon{padding-right:20px;}
+.sidebar p{line-height:25px;}
+.sidebar p a{color:#666;}
+.sidebar p a:hover{color:#99BE4D;}
+
+/*中下部的栏目*/
+.columns{margin-top:40px;height:200px;margin-bottom:60px;}
+.three_columns_w326{width:326px;}
+/*栏目的上部，即e-logo、网络服务、more那一栏*/
+.columns_top{border-bottom:1px solid #E0E0E0;margin-left:5px;margin-right:8px;}
+.columns_top span{padding-right:30px;padding-bottom:5px;}
+.title_border{border-bottom:2px solid #99BE4D;}
+.columns_top img{vertical-align:middle;}
+.columns_top a{padding:3px 10px 0 0;}
+.columns_top a:hover{color:#99BE4D;}
+/*栏目的中部，即左边小图片和右边文字说明*/
+.columns_center{padding:10px 10px 0 0;margin-left:5px;}
+.columns_center img{padding:5px 20px 0 0;}
+.columns_center p{padding-top:15px;line-height:25px;}
+.columns_center p a{color:#666;}
+.columns_center p a:hover{color:#99BE4D;}
+.columns_br{border-right:1px solid #E0E0E0;}
+/*栏目下部，即列表项及右边的日期*/
+.columns_bottom{padding:0 10px 25px 30px;line-height:20px;}
+.columns_bottom li a:hover{color:#99BE4D;}

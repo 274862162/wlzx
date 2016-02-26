@@ -1,0 +1,15 @@
+/*Written by tmn*/
+
+/*花纹背景图片*/
+.background_img{background:url(../../images/webimg/announcement/background.jpg) no-repeat;}
+
+/*中部公告区*/
+.content{width:980px;height:765px;background-color:#ffffff;border:1px solid #999999;margin:25px auto;position:relative;top:25px;}
+.title{font-size:24px;padding:70px 0 20px 0;}
+.context_text{word-wrap:break-word;word-break:normal;line-height:35px;padding:0 150px;}
+.signature{padding:80px 0 0 680px;line-height:25px;}
+
+/*左、右下角翻页图标*/
+.front_next{line-height:25px;margin-bottom:50px;}
+.front{width:70px;background-color:#a19494;border-radius:4px;margin-left:180px;}
+.next{width:70px;background-color:#a19494;border-radius:4px;margin-left:840px;}

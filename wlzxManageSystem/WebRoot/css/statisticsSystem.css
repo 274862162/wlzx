@@ -1,0 +1,85 @@
+/*项目列表*/
+.personInfo ul li{
+	margin:10px 100px 0 0;
+	}
+.fix_size{
+	width:700px;
+	height:10px;
+	}
+.statisticsSystem1 ul{
+	margin-left: 280px;
+	margin-top: 40px;
+}
+.statisticsSystem1 ul li{
+	margin-right: 50px;
+}
+.statisticsSystem1 ul li input{
+	margin-right: 5px;
+}
+
+.statisticsSystem2{
+	margin-left: 280px;
+	margin-top: 40px;
+}
+.statisticsSystem2 select{
+	margin-right: 50px;
+	width: 80px;
+	height: 25px;
+}
+
+.statisticsSystem3{
+	margin-left: 320px;
+}
+
+/*中部内容*/
+.statisticsContent{
+	margin: 10px 0 0 170px;
+	}
+	
+/*内容表格*/
+.statisticsContent table{
+	width: 750px;
+	height: 250px;
+	border-collapse: collapse;
+	text-align: center;
+	margin-left: -70px;
+}
+.statisticsContent table .table-title{
+	background-color: black;
+	color: white;
+}
+.statisticsContent table tr td{
+	border:1px solid #999999;
+	width: 200px;
+}
+
+/*翻页*/
+.changePage{
+	margin:10px 0 0 80px;
+}
+.changePage a{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.changePage span{
+	margin-left:500px;
+}	
+
+/*底部统计分析*/
+.statistical-analysis {
+	margin-left: 170px;
+	margin-top: 30px;
+}
+.statistical-analysis p{
+	margin-bottom: 5px;
+}
+.statistical-analysis textarea{
+	resize:none;
+	width: 700px;
+	height: 50px;
+}
+
+ /*按钮*/
+ .button input{
+ 	margin-top: 5px;
+ }

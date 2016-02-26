@@ -1,0 +1,23 @@
+/*Written by tmn*/
+
+/*包围中部所有内容*/
+.content{height:;margin-bottom:30px;}
+
+/*全部搜索结果文字*/
+.all_result_text{margin:40px 0 10px 0;}
+
+/*搜索出的数据显示*/
+.content table{text-align:center;}
+.title{background-color:#ddddff;height:35px;line-height:30px;padding:0 20px;}
+.wType{width:100px;}
+.wName{width:350px;}
+.wdownload{width:380px;}
+.wTime{width:200px;}
+.show{height:813px;border-left:1px solid #999999;border-right:1px solid #999999;padding:10px 20px 0 20px;}
+
+/*底端的页面切换*/
+.change_page{padding:30px 225px;border-bottom:1px solid #999999;border-left:1px solid #999999;border-right:1px solid #999999;}
+.change_page li{vertical-align:bottom;}
+.change_page a{border:1px solid #999999;width:66px;height:31px;line-height:30px;}
+.change_page a:hover{background-color:#ddddff;}
+.link_bgcolor{background-color:#ddddff;}

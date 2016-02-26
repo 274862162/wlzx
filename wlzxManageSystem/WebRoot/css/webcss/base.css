@@ -1,0 +1,31 @@
+/*This style is a common style,you can use it to modify the page.*/
+*{margin:0;padding:0;font-family:微软雅黑;} /*通用元素，取消浏览器的默认边距，默认字体为微软雅黑*/
+a{text-decoration:none;color:#333;font-family:"微软雅黑"}/*链接无下划线，默认字体颜色为黑色*/
+.wrapper{width:100%;min-width:1280px;}/*整体包围的宽度*/
+.w980{width:980px;color:#333;}/*中部内容宽度*/
+.margin0_auto{margin:0 auto;}/*上下边距为零，左右居中对齐*/
+.float_l{float:left;}/*左浮动*/
+.float_r{float:right;}/*右浮动*/
+.none_list_style_type{list-style-type:none;}/*取消默认的项目符号*/
+.none_text_decoration{text-decoration:none;}/*字体没有装饰*/
+.text_align_c{text-align:center;}/*字体居中对齐*/
+.text_indent_2em{text-indent:2em;}/*首航缩进2个字符*/
+.font_songti{font-family:"微软雅黑";}/*取消宋体*/
+.font_huawencaiyun{font-family:"华文彩云";}/*华文云彩*/
+.f12{font-size:12px;}/*字体大小为12像素*/
+.f14{font-size:14px;}/*字体大小为14像素*/
+.f17{font-size:17px;}/*字体大小为17像素*/
+.f1768{font-size:17.68px;}/*字体大小为17.68像素*/
+.f_white{color:#ffffff;}/*字体颜色为白色*/
+.f_blue99BE4D{color:#99BE4D;}/*#99BE4D的蓝色字体颜色*/
+.f_blue003399{color:#99BE4D;}/*#003399的蓝色字体颜色*/
+.f_grey4b4b4b{color:#4b4b4b;}/*#4b4b4b的灰色字体颜色*/ /*2014/05/29tmn新增*/
+.f_weight_b{font-weight:bold;}/*加粗字体*/ /*2014/05/29tmn新增*/
+.display_i{display:inline;color:#666;}/*设置为行内元素*/ 
+.display_i_b{display:inline-block;}/*设置为行内且为区块元素*/
+.overflow_h{overflow:hidden;}/*溢出隐藏*/
+.background_blue0066ff{background-color:#99BE4D;}/*背景颜色为#99BE4D*/
+.f_sp2{	letter-spacing:2px;}/*字间距为2px,应用于部门动态、视频列表等标题*/
+.f_lineHeifht{line-height:180%;}/*以百分比设置段落行高为180%*/
+img{border:0px;}/*将图片边框设置为0*/
+.horizonLine{border-style:solid none none none;width:100%;color:#999999;}/*水平线颜色*//*2014/6/4Wmj新增*/

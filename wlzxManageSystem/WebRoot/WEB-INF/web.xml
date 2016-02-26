@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>wlzxManageSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- written by hsg -->
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TestPaperServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.TestPaperServlet</servlet-class>
+  </servlet>
+  <!-- <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.UserServlet</servlet-class>
+  </servlet> -->
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ExamServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.ExamServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ScheduleServlet</servlet-name>
+  	<servlet-class>cn.edu.gduf.netserver.controller.ScheduleServlet</servlet-class>
+  </servlet>
+  
+  <!-- written by Wmj -->
+  <servlet>
+    <servlet-name>SurveySystemQusnServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.SurveySystemQusnServlet</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>SurveySystemQusnServlet</servlet-name>
+    <url-pattern>/SurveySystem/SurveySystemQusnServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DisplayChart</servlet-name>
+    <servlet-class>org.jfree.chart.servlet.DisplayChart</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>DisplayChart</servlet-name>
+    <url-pattern>/DisplayChart</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>OnlineRepairServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.OnlineRepairServlet</servlet-class>
+  </servlet>
+  
+    <servlet-mapping>
+    <servlet-name>OnlineRepairServlet</servlet-name>
+    <url-pattern>/onlineRepairSystem/OnlineRepairServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PayRollServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.PayRollServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PayRollServlet</servlet-name>
+    <url-pattern>/PayRollSystem/PayRollServlet</url-pattern>
+  </servlet-mapping>
+  <!-- written by hsg -->
+    <servlet-mapping>
+    <servlet-name>TestPaperServlet</servlet-name>
+    <url-pattern>/TestPaperServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExamServlet</servlet-name>
+    <url-pattern>/ExamServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ScheduleServlet</servlet-name>
+    <url-pattern>/ScheduleServlet</url-pattern>
+  </servlet-mapping>
+
+ <!-- written by cjy -->
+<display-name>wlzxManageSystem</display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangePasswordServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.ChangePasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SignServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.SignServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BasicInfoServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.BasicInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ArtRegInfoServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.ArtRegInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PersonInfoServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.PersonInfoServlet</servlet-class>
+  </servlet>
+  
+	<servlet>
+        <servlet-name>demo</servlet-name>
+        <jsp-file>/WEB-INF/search.jsp</jsp-file>   
+	</servlet>
+	
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchSwitchServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.SearchSwitchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ObjectInfoServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.ObjectInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DutyRegisterServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.DutyRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowDutyRegisterServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.ShowDutyRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpDownloadServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.UpDownloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SystemLogServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.SystemLogServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryWageServelt</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.QueryWageServelt</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>IndexSystemLogManagementServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.IndexSystemLogManagementServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckDutyRegister</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.CheckDutyRegister</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SuperManagementServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.SuperManagementServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ForeServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.ForeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetRole</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetRole</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetOneRole</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetOneRole</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelRole</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.DelRole</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetWebNotice</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetWebNotice</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetDownloadSection</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetDownloadSection</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelWebNotice</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.DelWebNotice</servlet-class>
+  </servlet>
+ <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetImages</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetImages</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetLearningFile</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetLearningFile</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetWebService</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetWebService</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetVideo</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetVideo</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Circularize</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.Circularize</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetUser</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetUser</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetNotice</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetNotice</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetSwitch</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.GetSwitch</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>WebNoticeServlet</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.WebNoticeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>ajax请求</description>
+    <display-name>CommonServlet_ajax</display-name>
+    <servlet-name>CommonServlet_ajax</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.CommonServlet_ajax</servlet-class>
+  </servlet>
+  <servlet>
+    <description>请求转发</description>
+    <display-name>CommonServlet_forward</display-name>
+    <servlet-name>CommonServlet_forward</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.CommonServlet_forward</servlet-class>
+  </servlet>
+  <servlet>
+    <description>重定向</description>
+    <display-name>CommonServlet_redirect</display-name>
+    <servlet-name>CommonServlet_redirect</servlet-name>
+    <servlet-class>cn.edu.gduf.netserver.controller.CommonServlet_redirect</servlet-class>
+  </servlet>
+
+
+
+
+	<servlet-mapping>
+       <servlet-name>demo</servlet-name>
+       <url-pattern>/search</url-pattern>        
+	</servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePasswordServlet</servlet-name>
+    <url-pattern>/ChangePasswordServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SignServlet</servlet-name>
+    <url-pattern>/SignServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/SearchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BasicInfoServlet</servlet-name>
+    <url-pattern>/BasicInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ArtRegInfoServlet</servlet-name>
+    <url-pattern>/ArtRegInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PersonInfoServlet</servlet-name>
+    <url-pattern>/PersonInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchSwitchServlet</servlet-name>
+    <url-pattern>/SearchSwitchServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ObjectInfoServlet</servlet-name>
+    <url-pattern>/ObjectInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DutyRegisterServlet</servlet-name>
+    <url-pattern>/DutyRegisterServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>ShowDutyRegisterServlet</servlet-name>
+    <url-pattern>/ShowDutyRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpDownloadServlet</servlet-name>
+    <url-pattern>/UpDownloadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SystemLogServlet</servlet-name>
+    <url-pattern>/SystemLogServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>QueryWageServelt</servlet-name>
+    <url-pattern>/QueryWageServelt</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>IndexSystemLogManagementServlet</servlet-name>
+    <url-pattern>/IndexSystemLogManagementServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckDutyRegister</servlet-name>
+    <url-pattern>/CheckDutyRegister</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/DownloadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SuperManagementServlet</servlet-name>
+    <url-pattern>/SuperManagementServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ForeServlet</servlet-name>
+    <url-pattern>/ForeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetRole</servlet-name>
+    <url-pattern>/GetRole</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetOneRole</servlet-name>
+    <url-pattern>/GetOneRole</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelRole</servlet-name>
+    <url-pattern>/DelRole</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetWebNotice</servlet-name>
+    <url-pattern>/GetWebNotice</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>GetDownloadSection</servlet-name>
+    <url-pattern>/GetDownloadSection</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelWebNotice</servlet-name>
+    <url-pattern>/DelWebNotice</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetImages</servlet-name>
+    <url-pattern>/GetImages</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetLearningFile</servlet-name>
+    <url-pattern>/GetLearningFile</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetWebService</servlet-name>
+    <url-pattern>/GetWebService</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetVideo</servlet-name>
+    <url-pattern>/GetVideo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Circularize</servlet-name>
+    <url-pattern>/Circularize</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetNotice</servlet-name>
+    <url-pattern>/GetNotice</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUser</servlet-name>
+    <url-pattern>/GetUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSwitch</servlet-name>
+    <url-pattern>/GetSwitch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>WebNoticeServlet</servlet-name>
+    <url-pattern>/WebNoticeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CommonServlet_ajax</servlet-name>
+    <url-pattern>/CommonServlet_ajax</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CommonServlet_forward</servlet-name>
+    <url-pattern>/CommonServlet_forward</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CommonServlet_redirect</servlet-name>
+    <url-pattern>/CommonServlet_redirect</url-pattern>
+  </servlet-mapping>
+
+  
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <filter>  
+          <filter-name>login</filter-name>  
+          <filter-class>cn.edu.gduf.netserver.filter.LoginFilter</filter-class>  
+  </filter>
+  <filter-mapping>  
+          <filter-name>login</filter-name>  
+          <url-pattern>/jsp/*</url-pattern> 
+          <dispatcher>REQUEST</dispatcher> 
+          <dispatcher>FORWARD</dispatcher> 
+  </filter-mapping>
+</web-app>

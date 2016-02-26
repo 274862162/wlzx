@@ -1,0 +1,33 @@
+/*中部内容区*/
+.content{
+	margin-top: 100px;
+	width: 400px;
+	height: 585px;
+}
+
+/*左边图片*/
+.content img{
+	margin-right: 40px;
+}
+
+/*表单信息*/
+.content form{
+	line-height: 45px;
+}
+
+.content form label{
+	margin-right: 20px;
+}
+
+.content form .inputText{
+	margin-left: 15px;
+}
+
+/*下一步*/
+.next{
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+/*中部内容区结束*/

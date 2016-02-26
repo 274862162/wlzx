@@ -1,0 +1,31 @@
+/*body部分的处理*/
+.inner{width:980px;margin:auto;margin-top:1px;margin-bottom:30px;}
+
+/*中间的大图背景*/
+.index_image{top:-10px;background:url("../../images/webimg/studyArea/studyArea.jpg");height:350px;width:1347px;margin:auto}
+
+/*中部的导航条*/
+.nav2 {display:block;font-family:"微软雅黑";padding:9px 28.3px;text-align:center;float:left;}
+.now{color:#EF9C00}
+.general{color:white}
+.nav2 a:hover{background:#ffffff;color:#003399;margin:-9px -28.3px;padding:9px 28.3px;}
+
+/*中部的小标题*/
+.image_text{font-family:"微软雅黑";color:#0066FF;margin-left:0px;}
+
+/*中部的图片区*/
+.frame{border: 1px solid #bbb;margin-top:5px;margin-bottom:10px;padding-bottom:15px;}
+.frame img{margin-left:48px;margin-top:8px;}
+.frame ul li{font-family:"微软雅黑";font-size:13px;margin-left:47px;margin-right:0px;}
+.frame ul li a{color:#787878}
+.frame ul li a:hover{color:#0066FF}
+
+/*翻页*/
+.page_change{font-family:"微软雅黑";height:30px; line-height:30px;width:60px;margin-top:50px;
+			display:inline;float:left;text-align:center;border: 1px solid #bbb;}
+.page_change:hover{color:#787878;background:#DDDDFF}
+
+
+.content{height:;}
+.title{background-color:#ddddff;}
+.show{height:813px;border-left:1px solid #999999;border-right:1px solid #999999;border-bottom:1px solid #999999;}

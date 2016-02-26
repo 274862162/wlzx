@@ -1,0 +1,16 @@
+/*中部图片展示*/
+.banner{width:1349px;height:339px;background:url(../../images/webimg/netService/banner.png) no-repeat;}
+/*中部“网络服务介绍”*/
+.introduction{width:600px;height:100px;background:#33533f;margin:238px 0 0 180px;color:white;padding:10px 20px 0 20px;
+border-radius:10px 10px 0 0;}
+/*“网络服务”*/
+.netserviceBig{font-size:24px;margin-bottom:5px;}
+/*“网络服务”详细介绍*/
+.netserviceSmall{line-height:20px;}
+
+
+
+/*中下部列表显示*/
+.linkText {margin-top: 50px;margin-bottom: 50px;line-height: 35px;width: 800px;}
+.linkText a:hover {color: #99BE4D;}
+.linkText span {float: right;}

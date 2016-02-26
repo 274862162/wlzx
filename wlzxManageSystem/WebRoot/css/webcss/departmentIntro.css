@@ -1,0 +1,30 @@
+.content{width:1347px;height:auto;padding:40px 0}
+.department{width:530px;height:auto;margin:50px auto 0 auto;}
+
+/*开始，Next，top铵扭*/
+.begin, .next, .top{display:block;width:165px;height:60px;line-height:60px;margin:40px auto 0 auto; background:#99BE4D;color:#ffffff;-moz-border-radius:27px;-webkit-border-radius:27px;border-radius:27px;}
+
+/*虚线*/
+.line{height:450px;border-right:2px dashed #99BE4D;margin:0 265px 0 0;filter:alpha(opacity:50);opacity:0.5;}
+
+/*部门图标*/
+.department_icon{margin-bottom:25px;}
+
+/*部门介绍向导*/
+.department_guide{margin-top:25px;overflow:hidden;}
+.department_guide_msg{position:relative;}
+.department_guide_msg span{color:#99BE4D;cursor:pointer;position:absolute;left:40px;margin-top:4px;}
+.department_guide_msg p{color:#99BE4D;position:absolute;left:65px;}
+
+/*展开部门介绍信息的开关*/
+.toggle{height:16px;width:16px;background:url(../../images/webimg/departmentIntro/toggle.png);
+-webkit-transition:-webkit-transform 0.4s ease-in-out;transition:transform 0.4s ease-in-out;}
+
+/*显示部门介绍信息的会话框*/
+.department_msg{position:relative;padding:15px;margin-top:45px;color:#fff;background:#99BE4D;
+-webkit-border-radius:27px;-moz-border-radius:27px;border-radius:27px;height:0;filter:alpha(opacity:0);opacity:0;}
+
+/*实现会话框左上的小三角*/
+.triangle:after{content:"";position:absolute;left:55px;border-width:35px 0 0 50px;
+border-style:solid;top:-25px;border-color:transparent #99BE4D;-webkit-transform:rotate(-15deg);
+-moz-transform:rotate(-15deg);transform:rotate(-15deg);}

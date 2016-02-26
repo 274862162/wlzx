@@ -1,0 +1,73 @@
+/*dutyRegister 表格右上角翻页按钮*/
+.pn{
+	width:400px;
+	display: block;
+	float:right;
+	margin: 100px 0 10px 0px;
+	font-size: 0.9em;
+	line-height: 2em;
+}
+.right_form{
+	display: block;
+	float:right;
+	width:100px;
+	margin: 2px 0 10px 0;
+}
+.right_form form{
+	margin:2px 10px 0px 10px;
+	float:left;
+	width:50px;
+}
+.pn img{
+	vertical-align: middle;
+	width:16px;
+	height:20px;
+}
+
+.pn input{
+	width: 30px;
+	margin:0 10px 0 10px;
+}
+
+/*dutyRegister中部的表格*/
+.dutyRegister table{
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	overflow: auto;
+	margin-bottom:20px;
+}
+.dutyRegister table tr td{
+	border-bottom:1px solid #ccc;
+	height: 40px;
+	width: 100px;
+	overflow:hidden;
+}
+
+.dutyRegister table .head{
+	background-color: #ccc;	
+	color: white;
+	overflow:hidden;
+}
+.dutyRegister table .head td{
+	height: 40px;
+}
+.dutyRegister .event{
+	width: 350px;
+	height: 40px;
+	line-height: 40px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+
+/*repairsManagement5.html*/
+.repairsManagement5 table tr td{
+	width: 200px;
+}
+#allUser .button{
+	margin-left:0;
+	margin-top:50px;
+	margin-bottom:20px;
+}
+#allUser .dutyRegister .pn{margin-top:0;}

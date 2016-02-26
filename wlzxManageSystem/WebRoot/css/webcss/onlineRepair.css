@@ -1,0 +1,62 @@
+/*Written by tmn*/
+/* 我要报修页面 */
+.message{margin-top:20px;}
+.message table{border-collapse:collapse;height:626px;}
+.message table td{border:1px solid #ccc;}
+.message table textarea{margin:10px;padding:2px 5px;width:813px;height:200px;border:1px solid #ccc;}/*"问题描述"文本域*/
+.repairMessage{background-color:#efefef;text-align:center;color:#666;height:30px;font-size:16px;}/*第一行，报修信息*/
+.mandatory{color:red;}/*必填提示星号*/
+.leftTd{width:131px;height:54px;text-align:center;}/*第一列，如学号*/
+.leftTdText{width:220px;height:28px;margin:0 15px;padding-left:5px;line-height:28px;border:1px solid #ccc;}/*第二列文本框*/
+
+.rightTd{width:583px;padding-left:15px;}/*第三列，如姓名*/
+.rightTdText{width:220px;height:28px;margin-left:30px;padding-left:5px;line-height:28px;}/*第三列的文本框*/
+.nameText{margin-left:58px;padding-left:5px;line-height:28px;border:1px solid #ccc;}/*“姓名”单元格的文本框*/
+.address{padding-left:15px;}/*住址*/
+.remarks{padding-left: 30px;}/*预约时间*/
+.remarks input{height: 28px;line-height: 28px;padding-left: 3px;margin-left:5px;border:1px solid #ccc;}
+.faultType{width:120px;margin-left:15px;border:1px solid #ccc;height:28px;}/*“故障类型”下拉列表*/
+.roomaddress{border:1px solid #ccc;height:28px;}
+.checkboxMessage{margin:0 5px 0 10px;}/*多选框，如651*/
+
+.button{text-align:center;margin:20px 0 50px 100px;}/*底部按钮*/
+/*“报修”“重置”按钮*/
+.repairReset{background-color:#99BE4D;width:120px;height:38px;margin-right:35px;color:white;line-height:38px;border-radius:0px;}
+
+
+/* js弹框，表单下方是否继续报修按钮 */
+#recommendedPlan #submitButton, #cancelClose-button{width: 100px;height: 34px;background-color: #99BE4D;border: none;color: white;margin-right: 16px;cursor: pointer;}
+
+
+
+
+/* 查看报修页面 */
+/* 中部所有内容 */
+.checkRepair{text-align: center;margin-top: 50px;}
+
+/* 中部三个图片栏目 */
+.checkRepair .repairColumn{margin-top: 50px;margin-bottom: 50px;}
+.checkRepair .repairColumn img{margin: 0 20px;}
+
+/* 查看报修表格 */
+.checkRepair .viewRepair{margin: 0 auto;display: inline-block;margin-bottom: 80px;}
+.checkRepair .viewRepair a{color: #99BE4D;}
+.checkRepair .viewRepair table{border-collapse: collapse;width: 1000px;}
+.checkRepair .viewRepair table .head{background-color: #efefef;}
+.checkRepair .viewRepair table tr td{border:1px solid #ccc;vertical-align: middle;height: 40px;}
+.checkRepair .viewRepair .changePage{margin-top: 10px;}
+.checkRepair .viewRepair .changePage a{margin: 0 5px;}
+
+/* 评分弹框 */
+#cancelClose-button{display: none;}
+#recommendedPlan .grade {margin-top: 52px;margin-left: 120px;}
+#recommendedPlan .grade input{margin-left: 30px;margin-right: 3px;}
+#recommendedPlan .sureButton input{margin-left: 210px;background-color: #0066ff;color: white;width: 80px;height: 28px;border: none;cursor: pointer;margin-top: 50px;}
+
+
+
+/* 修改密码页面 */
+.changePassword{margin-bottom: 100px;width:400px;}
+.changePassword p{margin-bottom: 30px;}
+.changePassword p input{height:28px;width:200px;border:1px solid #ccc;}
+.changePassword .update_pass_btn{height:40px;width:200px;background:#99BE4D;color:#fff;border:none;}

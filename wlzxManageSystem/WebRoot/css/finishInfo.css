@@ -1,0 +1,19 @@
+/*中部内容区*/
+.content{
+	text-align:center;
+	margin-top: 100px;
+	height: 585px;
+}
+
+.sure{
+	display: block;
+	background-color: #fbb217;
+	width: 120px;
+	height: 34px;
+	line-height: 34px;
+	color: white;
+	margin-top: 20px;
+}
+.sure:hover{
+	color: white;
+}

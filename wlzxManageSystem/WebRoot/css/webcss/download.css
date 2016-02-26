@@ -1,0 +1,20 @@
+/*Written by hsg*/
+/*download右部下载区的下载项*/
+.download_area_item{position:absolute; left:76px; top:150px;}  
+.download_area_item li{line-height:35px; clear:both}   
+.download_area_item li a{margin-left:12px; margin-top:-8px}   
+.download_area_item li a:hover{color:#0066ff;cursor:pointer;}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

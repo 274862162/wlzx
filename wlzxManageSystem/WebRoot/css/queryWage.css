@@ -1,0 +1,24 @@
+/*QueryWage1本月工资中部的表格*/
+.queryWage table{
+	width: 730px;
+	border-collapse: collapse;
+	margin: 50px 0 0 120px;
+	text-align: center;
+}
+
+.queryWage table tr td{
+	border:1px solid #ccc;
+	height: 45px;
+	width: 100px;
+}
+
+.queryWage table tr td img{
+	vertical-align: middle;
+	padding-left: 20px;
+}
+
+.queryWage table .head{
+	background-color: #ccc;
+	height: 45px;
+	color: white;
+}

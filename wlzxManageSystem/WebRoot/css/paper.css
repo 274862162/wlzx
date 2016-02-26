@@ -1,0 +1,27 @@
+/*左边选择题型*/
+.leftSide {float: left;width: 200px;text-align: center;position: fixed;height: 100%;background-color: #D1D2D4;}
+.leftSide p{margin-top: 150px;}
+.leftSide ul{margin-top: 20px;}
+.leftSide ul li{width:100px;height:40px;background-color: #fbb217;margin:0 auto 20px auto;list-style-type: none;}
+.leftSide ul li a{color: white;line-height: 40px;display: block;}
+/*右边试卷内容*/
+.createPaperContent{padding-left: 400px;}
+.createPaperContent input{padding-left: 3px;}
+/*右侧2个按钮*/
+.createPaperContent .choose-button{position: absolute;right: 100px;top:20px;position: fixed;}
+.createPaperContent .choose-button input{width: 100px;height: 40px;background-color: #fbb217;border:none;color: white;margin-right: 10px;cursor: pointer;}
+/*试卷标题*/
+.createPaperContent .paperName{padding-top: 20px;margin-bottom: 10px;}
+.createPaperContent .paperName-text{width: 500px;height: 30px;margin-bottom: 30px;}
+.createPaperContent .question-title{width: 350px;height: 30px;margin-left: 5px;margin-bottom: 10px;}
+/*试卷题*/
+.createPaperContent .answer input{margin-top: 8px;}
+.createPaperContent .answer input[type="text"]{width: 300px;height: 30px;}
+.createPaperContent .answer {margin-bottom: 30px;padding-left: 25px;}
+.createPaperContent .short-answer textarea{width: 347px;height: 180px;padding: 3px;resize:none;}
+.createPaperContent .blank-filling ,.single-option ,.multiple-option ,.judge-option ,.short-answer{position: relative;display: none;width: 600px;}
+.createPaperContent .deleteAnswer{position: absolute;right: 150px;}
+/*从题库选题*/
+.createPaperContent .answer .choose-question{background-color: #608f9f;border: none;color: white;cursor: pointer;width: 90px;height: 29px;position: absolute;bottom: 0;right: 110px;}
+/*iframe*/
+iframe{display: none;}

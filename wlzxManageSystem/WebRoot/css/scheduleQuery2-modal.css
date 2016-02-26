@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/**
+ * 模态框样式
+ * @authors tmn
+ * @date    2015-02-07 09:06:04
+ */
+
+ 
+/*repairManagement3.html-推荐方案*/
+/*弹框时出现的锁屏画布*/
+.modal-canvas ,.modal-canvas-duty{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+	background-color: #000;
+	z-index: 9998;
+	filter:alpha(opacity=30);  /*ie透明度*/
+	opacity: 0.30;	/*非ie透明度*/
+	display: none;
+}
+#recommendedPlan ,#recommendedPlan-duty{
+	position: absolute;
+	display: none;
+	z-index: 9999;
+	border:1px solid #dbdbdb;
+}
+.recommendedPlan-title{
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 17px;
+	background-color: #ebebeb;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	padding: 0 80px;
+	cursor: move;
+	border-bottom:1px solid #dbdbdb;
+}
+.recommendedPlan-title .close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.recommendedPlan {
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
+	padding: 0 80px;
+	overflow: auto;
+	background-color: #f6f6f6;
+}
+.table-style-modal {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.button_s{
+	margin: 20px 350px;
+}

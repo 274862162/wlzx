@@ -1,0 +1,10 @@
+/*Written by Wmj*/
+/*视频标题列表背景*/
+.video_title_bkg{background:url("../../images/webimg/index/banner/department_bg.jpg");width:265px;height:22px;margin-top:0px;}
+.recruit_video_title{margin:5px 20px;}
+.recruit_video_more{margin:5px 0px 0px 83px;}
+.net_video_more{margin:5px 0px 0px 65px;}
+/*列表表格大小*/
+.recruit_video_tablelist{width:980px;height:180px;margin-top:0px;}
+/*列表单元格图片的大小*/
+.table_tr1_style {width:172px;height:110px;}

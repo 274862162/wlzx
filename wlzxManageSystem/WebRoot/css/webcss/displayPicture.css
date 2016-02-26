@@ -1,0 +1,26 @@
+﻿/*Written by hsg*/
+.content{width:100%;height:700px;background-color:#000;}
+
+/*整个图片展示容器*/
+.imgContainer{width:745px;padding:35px;}
+
+/*展示的大图片*/
+.detailImg{position:relative;}
+.detailImg img{border-radius:8px;}
+.detailImg_btn{position:absolute;width:41px;height:41px;top:44%;cursor:pointer;opacity:0;filter:alpha(opacity=0);} /*大图区"前一张"和"后一张"的共同样式*/
+#detailImg_pre{background:url(../../images/webimg/displayPicture/pre.jpg) 0 0 no-repeat;left:60px;}
+#detailImg_next{background:url(../../images/webimg/displayPicture/next.jpg) 0 0 no-repeat;right:60px;}
+
+/*展示的小图片*/
+.smallImg{margin:12px auto;position:relative;}
+.smallImg img{cursor:pointer;border-radius:5px;}
+.smallImg li{float:left;width:76px;}
+.smallImg li a{display:block;overflow:hidden;margin:5px auto;opacity:0.3;filter:alpha(opacity=30);}
+.smallImg li a:hover,.smallImg .cur a{opacity: 1;filter:alpha(opacity=100);}
+.smallImg div{width:684px;} /*存放小图的div的长度*/
+.smallImg ul{position:relative;width:1368px;}
+.smallImg_btn{position:absolute;top:7px;height:27px;width:27px;cursor:pointer;
+opacity:0.3;filter:alpha(opacity=30);} /*小图区"前一张"和"后一张"的共同样式*/
+#smallImg_pre{background:url(../../images/webimg/displayPicture/pre_s.jpg) 0 0 no-repeat;left:0;}
+#smallImg_next{background:url(../../images/webimg/displayPicture/next_s.jpg) 0 0 no-repeat;right:0;}
+#smallImg_pre:hover,#smallImg_next:hover{opacity:1;filter:alpha(opacity=100);}

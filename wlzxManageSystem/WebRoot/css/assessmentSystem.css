@@ -1,0 +1,134 @@
+/*written by Wmj*/
+/*中部内容*/
+.assessmentContent{
+	margin: 50px 0 0 270px;
+	width:800px;
+	line-height:40px;
+}
+.assessmentContent form .ratio{
+	width: 55px;
+}
+.assessmentContent label{
+	margin-left:10px;
+	margin-right: 10px;
+}
+.assessmentContent .contentRatio{
+	margin-left: 120px;
+}
+
+/*确定按钮*/
+.assessment_botton{
+	margin-left: 140px;
+}
+
+
+/*内容表格*/
+.assessmentContent table{
+	width: 600px;
+	border-collapse: collapse;
+	text-align: center;
+}
+.assessmentContent table tr td,th{
+	border:1px solid #999999;
+}
+
+/*翻页*/
+.changePage{
+	margin:10px 0 0 150px;
+}
+.changePage a{
+	padding: 0 15px;
+}
+.changePage span{
+	margin-left:350px;
+}
+
+/*assessmentSystem2.html中部表格*/
+.assessmentContent2{
+	margin-left: 170px;
+}
+
+/*assessmentSystem3.html中部成绩单*/
+.assessmentContent .schoolReport{
+	width: 450px;
+	text-align: center;
+}
+.assessmentContent .schoolReport .title{
+	font-weight: bold;
+}
+.assessmentContent .schoolReport span{
+	margin-right: 30px;
+}
+.assessmentContent .schoolReport .button{
+	margin-top: 20px;
+}
+
+/*assessmentSystem6.html中部表格内容*/
+.assessmentContent .statisticalResults textarea{
+	resize:none;
+	border:none;
+	width: 501px;
+	height: 61px;
+}
+.assessmentContent .statisticalResults .nextQuestion{
+	background-color: #0066ff;
+}
+.assessmentContent .statisticalResults .nextQuestion a{
+	color: white;
+}
+.assessmentContent .statisticalResults .nextQuestion a:hover{
+	color: white;
+}
+.assessmentContent .statisticalResults .statisticButton{
+	margin:15px 0 20px 270px;
+}
+
+
+/*assessmentSystem10.html&&assessmentSystem11.html考核试卷内容*/
+.testPaperContent li{
+	list-style-type: none;
+}
+.testPaperContent .testPaperContentTitle{
+	text-align: center;
+	font-weight: bold;
+	margin:15px 0;
+}
+.testPaperContent form{
+	width: 650px;
+}
+.testPaperContent form ul{
+	margin-bottom: 30px;
+}
+.testPaperContent form ul li{
+	line-height: 25px;
+}
+.testPaperContent form ul .title{
+	font-weight: bold;
+}
+.testPaperContent form ul li input{
+	margin-right: 5px;
+}
+.testPaperContent .blankFilling input{
+	margin:0 10px;
+}
+.testPaperContent .testTime {
+	position: absolute;
+	right: 150px;
+	padding: 10px;
+	background-color: #0066ff;
+	color: white;
+}
+
+.testPaperContent .examinee{
+	text-align: center;
+}
+.testPaperContent .wrongTitle{
+	width: 650px;
+	margin: 10px auto 0 auto;
+}
+.testPaperContent .wrongTitle ul{
+	margin-bottom: 30px;
+}
+.testPaperContent .wrongTitle .title{
+	font-weight: bold;
+}

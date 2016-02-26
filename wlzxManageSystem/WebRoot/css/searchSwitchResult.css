@@ -1,0 +1,34 @@
+.content{
+	height: 1350px;
+}
+
+/*搜索结果*/
+.search_result span{
+	color: #333;
+	font-size:16px;
+}
+
+.search_result hr{
+	border: 1px dashed #999999;
+	width: 914px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+/*交换机图片*/
+.search_switch{
+	margin-right: 20px;
+	margin-top: 7px;
+}
+
+
+
+/*左侧菜单栏*/
+.switchMenu{
+	height: 1500px;
+}
+
+/*底部脚部*/
+.switchFooter{
+	margin-top: 150px;
+}

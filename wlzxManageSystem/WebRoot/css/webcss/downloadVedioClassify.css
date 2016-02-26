@@ -1,0 +1,33 @@
+/*Written by hsg*/
+/*download.html与vedioClassify.html 相同部分样式*/
+.content{width:1000px;height:850px;margin-top:22px;}
+.download_vedio{width:160px;height:274px;border:1px solid #A19494;position:relative;}
+
+/*分类检索*/
+.download_vedio_classifysearch{height:53px;width:160px;line-height:53px;background-color:#A19494;color:#FFFFFF;margin-bottom:24px;}
+
+/*分类检索下的分类*/
+.download_vedio_classify{height:36px;line-height:36px;margin-bottom:10px;cursor:pointer;}
+.download_vedio_classify:hover{border:solid #A19494;border-width:1px 0;}
+.download_vedio_classify a{line-height:36px;}
+.download_vedio_classify a:hover{color:#0066ff;}
+.download_vedio_classify hr{width:85px;margin:0 auto;}
+
+/*download/vedioClassify右部下载区/视频区*/
+.download_vedio_area{display:none;width:836px;height:780px;position:absolute;left:160px;top:0;margin-top:-1px;border:1px solid #A19494;}
+#area1{display:block;}
+
+/*download/vedioClassify右部下载区/视频区顶部信息*/
+.download_vedio_area_msg{height:53px;border-bottom:1px solid #DDDDFF;line-height:53px;}
+.download_vedio_area_msg div{margin:0 auto;width:729px;}
+
+/*download/vedioClassify右部下载区/视频区的具体分类*/
+.download_vedio_area_classify{width:750px;height:60px;margin:10px auto;border-bottom:1px solid #DDDDFF;}
+.download_vedio_area_classify span{margin-top:4px;}
+.download_vedio_area_classify li a:hover{background-color:#0066ff;color:#FFFFFF;cursor:pointer;}
+
+/*download/vedioClassify右部页码*/
+.download_vedio_area_page{position:absolute;left:188px;bottom:10px;}
+.download_vedio_area_page a{width: 57px;height: 28px;border:1px solid #A19494;line-height:28px;}
+.download_vedio_area_page .page_current{background:#DDDDFF;}
+.download_vedio_area_page a:hover{background:#DDDDFF;}

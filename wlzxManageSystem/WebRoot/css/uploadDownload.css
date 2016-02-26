@@ -1,0 +1,116 @@
+/*上传下载*/
+.uploadDownload{
+	position: absolute;
+	left: 202px;
+	top: 0;
+}
+
+.uploadDownload_nav{
+	padding-top: 10px;
+	padding-left: 25px;
+}
+.uploadDownload_department li{
+	margin-right: 15px;
+}
+
+.uploadDownload_department li a:hover{
+	color: #0066ff;
+}
+
+.uploadDownload hr{
+	border: 1px dashed #999999;
+	width: 914px;
+	position: absolute;
+	margin-top: 30px;
+}
+
+.uploadDownload_type{
+	position: absolute;
+	top: 62px;
+	padding-top: 40px;
+	margin-left: -46px;
+	width: 100%;
+	height: 72px;
+}
+
+.uploadDownload_type li{
+	margin-left: 96px;
+}
+
+/*上传按钮*/
+.uploadDownload_upload{
+	margin-top: 150px;
+}
+.file-box{margin-top:10px;position:relative;}
+.uploadDownload_upload input{
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	margin-left:10px;
+}
+.uploadDownload_upload input[type=button]{
+	width: 136px;
+	height:34px;
+	color: #ffffff;
+	background-color: #fbb217;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	position:absolute;
+	z-index:1;
+	left:190px;
+}
+.uploadDownload_upload input[type=submit]{
+	width: 136px;
+	height:34px;
+	color: #ffffff;
+	background-color: #fbb217;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+.uploadDownload_upload input[type=file]{
+	width: 136px;
+	height:35px;
+	position:relative;
+	opacity:0;
+	filter:alpha(opacity=0);
+	top:-7px;
+	z-index:2;
+}
+/*可下载的文件*/
+.uploadDownload_item{
+	margin-top: 40px;
+}
+
+.uploadDownload_item table{
+	width: 100%;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+}
+
+.uploadDownload_item table tr{
+	height: 50px;
+	border-bottom: 1px #ccc solid;
+}
+
+.uploadDownload_item table tr td div{
+	position: relative;
+}
+
+.uploadDownload_item table tr td div img{
+	position: absolute;
+	top: -3px;
+}
+
+.uploadDownload_item table tr td div span{
+	margin-left: 35px;
+}
+
+.uploadDownload_page{
+	margin-top: 20px;
+}
+
+.uploadDownload_page .pageDown{
+	float:right;
+}

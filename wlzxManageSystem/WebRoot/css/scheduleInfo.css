@@ -1,0 +1,94 @@
+/*超链接样式*/
+a{
+	color: #608f9f;
+	display: inline-block;
+	text-align: center;
+}
+a:hover{
+	color:#fbb217;
+}
+
+/*中部内容区*/
+.content{
+	position: relative;
+}
+
+.scheduleInfo{
+	position: absolute;
+	left: 202px;
+	top: 0;
+}
+.scheduleInfo .queryCondition {
+	margin: 40px 0 0 220px;
+	padding-bottom: 1px;
+}
+.scheduleInfo .queryCondition li{
+	margin-right: 30px;
+}
+.scheduleInfo .queryCondition li input ,.scheduleInfo .queryCondition li select{
+	margin-left: 5px;
+	height: 28px;
+}
+.scheduleInfo .queryCondition li input[type="text"]{
+	height: 24px;
+}
+.scheduleInfo_nav{
+	padding-top: 10px;
+	padding-left: 25px;
+}
+.scheduleInfo hr{
+	border: 1px dashed #999999;
+	width: 914px;
+	position: absolute;
+	margin-top: 15px;
+}
+.table_style{
+	width:750px;
+	line-height: 40px;
+	border-right:1px solid #000000;
+	border-bottom:1px solid #000000;
+	text-align:center;
+	margin-top:60px;
+	margin-left: 100px;
+	padding:0;
+	border-spacing:0px;
+}
+.table_style tr td{
+	border-left:1px solid #000000;
+	border-top:1px solid #000000;
+	margin:0px;
+}
+.table_footer{
+	width:100%;
+	line-height: 40px;
+	margin:5px;
+}
+.table_footer ul li{
+	display:inline-block;
+	text-decoration: none;
+}
+.table_footer ul li a{
+	display:inline-block;
+	padding: 0 15px;
+}
+.margin_left_20{
+	margin-left:20px;
+}
+.button_style{
+	width:50px;
+	height:22px;
+	color: #ffffff;
+	background-color: #0066ff;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+}
+.excel{
+	width: 27px;
+	height: 27px;
+	vertical-align: middle;
+	padding-left: 8px;
+}
+.line_height_30{
+	line-height: 30px;
+}

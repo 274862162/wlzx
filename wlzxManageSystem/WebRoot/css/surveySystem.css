@@ -1,0 +1,151 @@
+/*Written by Wmj*/
+/*中部内容*/
+.questionContent{
+	width:100%;
+	float:left;
+}
+/*问卷内容表格*/
+.questionContent table{
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	overflow: auto;
+	margin-bottom:20px;
+}
+
+.questionContent table tr td{
+	border-bottom:1px solid #ccc;
+	height: 40px;
+	width: 100px;
+	overflow:hidden;
+}
+.questionContent table .head{
+	background-color: #ccc;	
+	color: white;
+	overflow:hidden;
+}
+/*下方按钮*/
+.question_botton{
+	margin-left: 380px;
+	margin-top:30px;
+}
+
+
+/*surveySystem1.html 调整表单（表格）上下边距*/
+.surveyDesign .newPaper{
+	margin: 50px 0 0 0;
+}
+.surveyDesign .questionContent{
+	margin-top: 30px;
+}
+.surveyDesign .questionContent table tr td a{
+	margin-right: 10px;
+}
+.surveyDesign .questionContent table tr td select{
+	width: 67px;
+}
+
+
+/*surveySystem4.html 详细的调查问卷内容*/
+.survey li{
+	list-style-type: none;
+}
+.survey .surveyTitle{
+	text-align: center;
+	font-weight: bold;
+	margin:15px 0;
+}
+.survey form{
+	width: 650px;
+}
+.itemNum{
+	width:20px;float:left;
+}
+.survey form ul{
+	padding-left:20px;
+	margin-bottom: 30px;
+}
+.survey form ul li{
+	line-height: 25px;
+}
+.survey form ul .title{
+	font-weight: bold;
+}
+.survey form ul li input{
+	margin-right: 5px;
+}
+
+/*surveySystem5.html&&surveySystem6.html*/
+.surveyAnalysisButton input {
+	width: 50px;
+	height: 23px;
+}
+.surveyAnalysisContent{
+	margin-left: 100px;
+}
+.surveyAnalysisContent table{
+	width: 750px;
+}
+.surveyAnalysisContent table td{
+	width: 200px;
+}
+.surveyAnalysisContent .changePage{
+	display: inline-block;
+	margin-left: -18px;
+	margin-top: 15px;
+}
+.surveyAnalysisContent .changePage a{
+	color: #06f;
+	padding: 0 15px;
+}
+.surveyAnalysisContent .changePage span{
+	padding-left: 500px;
+}
+.surveyAnalysisContent .title{
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.surveyAnalysisContent .surveyResult input{
+	width:100px;
+	height: 32px;
+	margin-left: 330px;
+	margin-top: 20px;
+}
+/*填写问卷表格定位*/
+.fillContent{
+	margin-top:60px;
+}
+.paper_title{
+	width:60%;
+	height:30px;
+	margin-top:20px;
+}
+
+/* surveySystem3.html */
+.questionContent3{
+	width: 100%;
+}
+.questionContent3 .headInfo{
+	margin-bottom: 40px;
+	color:#999;
+}
+.questionContent3 .surveyContent{
+	overflow: auto;
+}
+.questionContent3 table{	
+	width: 100%;
+	height: 200px;
+	border-collapse: collapse;
+	text-align: center;
+	margin-bottom: 50px;
+	font-size:14px;
+}
+.questionContent3 table tr td{
+	border:1px solid #ccc;
+}
+.questionContent3 p{
+	letter-spacing: 1px;
+	font-size:16px;
+	margin-bottom: 20px;
+}

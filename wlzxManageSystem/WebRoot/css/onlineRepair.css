@@ -1,0 +1,99 @@
+/* Written by tmn */
+.message {
+	margin-top: 20px;
+}
+.message table {
+	border-collapse: collapse;
+	height: 626px;
+}
+.message table td {
+	border: 1px solid #ccc;
+}
+.message table textarea {
+	border:1px solid #ccc;
+	margin: 10px;
+	padding: 2px 5px;
+	width: 813px;
+	height: 200px;
+}
+
+/* "问题描述"文本域 */
+.repairMessage {
+	background-color: #ccc;
+	text-align: center;
+	color: #014d67;
+	height: 30px;
+	font-size:16px;
+}
+
+/* 第一行，报修信息 */
+.mandatory {
+	color: red;
+}
+
+/* 必填提示星号 */
+.leftTd {
+	width: 131px;
+	height: 54px;
+	text-align: center;
+}
+
+/* 第一列，如学号 */
+.leftTdText {
+	border:1px solid #ccc;
+	height: 28px;
+	margin: 0 15px;
+	padding-left: 5px;
+}
+
+/* 第二列文本框 */
+.rightTd {
+	width: 583px;
+	padding-left: 20px;
+}
+
+/* 第三列，如姓名 */
+.rightTdText {
+	width: 220px;
+	height: 28px;
+	margin-left: 30px;
+	padding-left: 5px;
+}
+.rightTd .rightTdText{
+	border:1px solid #ccc;
+	width:180px;
+}
+/* 第三列的文本框 */
+.nameText {
+	margin-left: 58px;
+	padding-left: 5px;
+}
+
+/* “姓名”单元格的文本框 */
+.faultType {
+	width: 120px;
+	margin-left: 26px;
+}
+
+/* “故障类型”下拉列表 */
+.checkboxMessage {
+	margin: 0 5px 0 10px;
+}
+
+/* 多选框，如651 */
+.button {
+	text-align: center;
+	margin: 20px 0;
+}
+
+/* 底部按钮 */
+/* “报修”“重置”按钮 */
+.repairReset {
+	background-color: #0066ff;
+	width: 93px;
+	height: 40px;
+	margin-right: 35px;
+	color: white;
+	line-height: 38px;
+	border-radius: 10px;
+}

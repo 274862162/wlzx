@@ -1,0 +1,204 @@
+/*中部内容区*/
+.content{
+	position: relative;
+}
+/*个人信息*/
+.personInfo{
+	position:relative;
+	width:74%;
+	float:left;
+	left: 20px;
+	top: 0;
+}
+
+.personInfo_nav{
+	padding: 10px 0 5px 0px;
+}
+
+
+.personInfo ul li{
+	margin-right: 10px;
+}
+.personInfo ul li input{
+	margin-right: 30px;
+}
+
+.personInfo ul li a:hover{
+	color: #fbb217;
+}
+
+.personInfo hr{
+	border: 1px dashed #ccc;
+	width: 100%;
+	position: absolute;
+	margin-top: 30px;
+}
+
+/*基本信息*/
+.personInfo_base{
+	margin-top: 78px;
+	margin-left: 330px;
+}
+
+.personInfo_base div  p{
+	width: 330px;
+}
+.personInfo_base div p input{
+	width:180px;
+	height:30px;
+	border:1px solid #ccc;
+	line-height:30px;
+	padding-left:8px;
+}
+/*密码修改*/
+.personInfo_pwd{
+	margin-top: 80px;
+	margin-left: 290px;
+}
+
+.personInfo_pwd ul li{
+	margin-bottom: 18px;
+}
+
+.personInfo_pwd ul li input{
+		width: 264px;
+		height: 34px;
+		padding-left: 5px;
+		border: 1px #999999 solid;
+	}
+/*物品信息*/
+.personInfo_object{
+	margin-top: 78px;
+	margin-left: 350px;
+}
+
+.personInfo_object label{
+	margin-right: 18px;
+	cursor: pointer;
+}
+
+.personInfo_object label input{
+	margin-right: 8px;
+	cursor: pointer;
+}
+
+
+/*按钮*/
+.personInfo_button{
+	margin-left: 20px;
+	margin-top: 50px;
+}
+.personInfo_button_pwd{
+	margin-top: 40px;
+	margin-left: 120px;
+}
+/*搜索区*/
+.search{
+	position: absolute;
+	left: 202px;
+	top: 0;
+}
+
+.search_nav{
+	padding-top: 10px;
+	padding-left: 25px;
+}
+
+.search_content{
+	margin-left:auto;
+	margin-right:auto;
+	width:375px;
+}
+
+.search_content input[type=text]{
+		width: 296px;
+		height: 35px;
+		border: 1px #ccc solid;
+		float: left;
+		padding-left: 5px;
+	}
+
+.search_content input[type=submit]{
+	width: 72px;
+	height: 37px;
+	color: #ffffff;
+	background-color: #fbb217;
+	border: none;
+	cursor: pointer;
+}
+.search_content input[type=button]{
+	width: 72px;
+	height: 37px;
+	color: #ffffff;
+	background-color: #fbb217;
+	border: none;
+	cursor: pointer;
+}
+.search_content select{
+	width:100px;
+	height:37px;
+	border-color:#ccc;
+	margin-right:10px;
+}
+.search_type{
+	margin-left:auto;
+	margin-right:auto;
+	width:375px;
+}
+
+.search_type input[type=radio]{
+	cursor: pointer;
+	margin-right: 8px;
+	width: 10px;
+	height: 10px;
+}
+
+.search_type label{
+	font-size: 10px;
+	cursor: pointer;
+	margin-right: 25px;
+}
+/*搜索结果*/
+.search_result{
+	margin-top: 40px;
+	width:375px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+}
+.search_result span{
+	display:inline-block;
+	padding-bottom:10px;
+	color: #608f9f;
+	margin-bottom: 10px;
+	font-size:16px;
+}
+
+.search_result p{
+	color:#333;
+}
+/*搜索结束*/
+.dutyQueryCondition{
+	margin-top:50px;
+}
+.logManagement .pn{
+	margin-top:10px;
+}
+.dutyQueryCondition i{
+	font-style:normal;
+	margin-right:10px;
+}
+.dutyQueryCondition input,.dutyQueryCondition select{
+	width:140px;
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	border:1px solid #ccc;
+	margin-right:10px;
+	margin-top: 10px;
+}
+.dutyQueryCondition input[type=button]{
+	background-color: #fbb217!important;
+	color:#fff!important;
+	height:34px!important;
+}

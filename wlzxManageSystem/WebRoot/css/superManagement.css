@@ -1,0 +1,57 @@
+/*上部检索框及按钮*/
+.superManagement {
+	padding: 70px 0 0 310px;
+}
+
+.superManagement .search {
+	margin-bottom: 50px;
+	margin-left: 45px;
+}
+
+.superManagement .search input {
+	padding: 3px;
+}
+.superManagement .search input[type="submit"]{
+	background-color: #0066ff;
+	width: 80px;
+	height: 28px;
+	border: none;
+	margin-left: 20px;
+	color: white;
+}
+.superManagement1Button{
+	margin-left: 135px;
+	margin-top: 50px;
+}
+
+/*中部多选框*/
+.superManagement .tickBox {
+	margin-bottom: 20px;
+	margin-left: -80px;
+}
+
+.superManagement .tickBox span {
+	width: 200px;
+	display: inline-block;
+}
+
+.superManagement .tickBox input {
+	margin-right: 5px;
+	display: inline-block;
+}
+
+/*翻页*/
+.superManagement2 .changePage {
+	display: inline-block;
+	margin-left: -90px;
+	margin-top: 15px;
+}
+
+.superManagement2 .changePage a {
+	color: #06f;
+	padding:0 10px;
+}
+
+.superManagement2 .changePage span {
+	padding-left: 290px;
+}

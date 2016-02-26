@@ -1,0 +1,20 @@
+/*Written by tmn*/
+
+/*包围中部所有内容*/
+.content{width:1347px;height:630px;padding-top:50px;}
+
+/*包围左边图片和右边登录表单*/
+.login{width:979px;height:352px;background-color:#ffffff;border-radius:10px;border:1px solid #ccc;}
+
+/*左边图片展示*/
+.picture{width:570px;height:352px;}
+.picture img{width:570px;height:352px;}
+
+/*右边登录表单*/
+.form{margin-top:60px;margin-left:40px;color:#666;}
+.form form label{position:absolute;margin-top:26px;margin-left:6px;}
+.input_text{padding:12px 0 12px 35px;width:220px;height:14px;margin-top:15px;border:1px solid #ccc;}
+.input_text_username{background:url(../../images/webimg/login/username.jpg) no-repeat;background-position:center left;}
+.input_text_password{background:url(../../images/webimg/login/password.jpg) no-repeat;background-position:center left;}
+.auto_login{margin:10px 0;margin-right:5px;}
+.login_enter input{width:254px;height:40px;background-color:#99BE4D;line-height:35px;margin-top:15px;border:none;color:#fff;}

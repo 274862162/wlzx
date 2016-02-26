@@ -1,0 +1,89 @@
+/*表格及按钮*/
+.superManagement4 .tableContent{
+	height: 280px;
+}
+
+.superManagement4 .button {
+	color: white;
+	width: 150px;
+	height: 35px;
+	line-height: 35px;
+	display: inline-block;
+	text-align: center;
+	margin: 20px 430px 0;
+}
+.queryWage table tr td{
+	width: auto;
+}
+.superManagement4 textarea{
+	resize:none;
+	width: 729px;
+	height: 280px;
+	border: none;
+	padding:3px;
+}
+.superManagement4 .announceTitle input{
+	width: 667px;
+	height: 46px;
+	border:none;
+	font-size: 17px;
+	padding-left: 3px;
+}
+
+.superManagement4 .addDownloadFile input{
+	width: 100px;
+}
+
+/*中下部翻页*/
+.superManagement4 .changePage {
+	display: inline-block;
+	margin-left: 110px;
+	margin-top: 15px;
+}
+
+.superManagement4 .changePage a {
+	color: #06f;
+	padding:0 15px;
+}
+
+.superManagement4 .changePage span {
+	padding-left: 460px;
+}
+
+/*中下部操作按钮，双按钮时*/
+.superManagement16 {
+	margin: 30px 0 0 385px;
+}
+.superManagement16  input{
+	display: inline;
+	margin-right: 40px;
+	background-color:#0066ff;
+	width: 80px;
+	height: 28px;
+	border:none;
+	font-size: 14px;
+	cursor: pointer;
+	color: white;
+	text-align: center;
+}
+
+.superManagement19 hr ,.superManagement20 hr{
+	margin-top: 10px;
+}
+.superManagement19 .button input{
+	width: 130px;
+}
+
+/*模态框*/
+.superManagement8Modal table{
+	margin:60px auto;
+	width: 500px;
+	background-color: #fff;
+}
+.superManagement8Modal .button{
+	display: block;
+	margin: 20px auto;
+}
+.superManagement8Modal .button input{
+	margin-right: 0;
+}

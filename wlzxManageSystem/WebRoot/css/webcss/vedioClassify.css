@@ -1,0 +1,7 @@
+/*Written by hsg*/
+/*vedioClassify右部视频区的视频*/
+.vedio_area_item{position:absolute; margin-left:36px; margin-top:54px;}  
+.vedio_area_item li{margin-right:37px;margin-bottom:50px;}  
+.vedio_area_item li a:hover{color:#0066ff;cursor:pointer;}  
+
+

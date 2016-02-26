@@ -1,0 +1,148 @@
+/*左部功能栏S*/
+
+/*左部功能栏E*/
+/*报修系统上部检索框及按钮*/
+.repairs .search02 {
+	line-height:40px;
+	float:left;
+	width:65%;
+	margin-top: 65px;
+	margin-bottom: 30px;
+}
+.repairs .button {
+	display: inline-block;
+	float:right;
+}
+.aly_Btn input{margin-right:0!important;}
+.aly_intro{
+	float:left;
+	width:33%;
+	height:100px;
+	font-size:12px;
+	color:#999;
+	margin-top:46px;
+}
+/*统计图表域*/
+.chart_wrap{width:100%;}
+.chart_wrap dd{width:400px;position:relative;float:left;margin-right:40px;}
+.chart_title{font-size:16px;color:#608f9f;margin-bottom:20px;margin-top:-20px;}
+.chart_area01{float:left;}
+.tag_ul{float:right;width:80px;position:absolute;bottom:20px;right:0;text-align:center;}
+.tag_ul li{list-style:none;width:80px;height:20px;margin-bottom:6px;font-size:12px;color:#fff;line-height:20px;}
+/*中部多选框*/
+.repairs .item {
+	border-color:#ccc;
+	color:#666;
+	height:28px;
+	width: 100px;
+	margin-left: 12px;
+	margin-right: 10px;
+}
+/*底部问题描述文本域*/
+.message textarea{
+	resize:none;
+}
+
+/*报修单页面底部按钮位置*/
+.processing {
+	margin:20px auto;
+	width:100%;
+}
+
+/*报修单页面点击推荐方案显示的div样式*/
+#program{
+	position:fixed;
+	z-index:1;
+	background-color: #E8E8E8;
+	width: 500px;
+	height: 300px;
+}
+	
+/*具体方案*/
+.handle{
+	margin-left: 90px;
+	margin-top: 70px;
+	font-size: 20px;
+	color: #000;
+}
+
+/*推荐方案显示div中的确定按钮*/
+#confirm{
+	background-color: #06f;
+	color: white;
+	display: inline-block;
+	width: 150px;
+	height: 38px;
+	margin-left: 175px;
+	margin-top: 80px;
+	text-align: center;
+	line-height: 38px;
+	cursor: pointer;
+}
+
+/*repairManagement3.html-推荐方案*/
+/*弹框时出现的锁屏画布*/
+.modal-canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+	background-color: #000;
+	z-index: 9998;
+	filter:alpha(opacity=30);  /*ie透明度*/
+	opacity: 0.30;	/*非ie透明度*/
+	display: none;
+}
+#recommendedPlan{
+	position: absolute;
+	display: none;
+	z-index: 9999;
+	border:1px solid #dbdbdb;
+}
+.recommendedPlan-title{
+	width: 500px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 17px;
+	background-color: #ebebeb;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	padding: 0 80px;
+	cursor: move;
+	border-bottom:1px solid #dbdbdb;
+}
+.recommendedPlan-title .close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+.recommendedPlan {
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	padding: 20px 80px;
+	overflow: auto;
+	background-color: #f6f6f6;
+}
+.recommendedPlan form{
+	position: relative;
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+
+.recommendedPlan span {
+	display: block;
+	line-height: 20px;
+	margin-bottom: 20px;
+	line-height: 25px;
+}
+.recommendedPlan span input {
+	margin-right: 5px;
+}
+
+

@@ -1,0 +1,160 @@
+/*左部成员管理*/
+.member{
+	width: 200px;
+	height: 415px;
+}
+
+.member ul li{
+    border: 1px #999999 solid;
+	border-top: none;
+}
+
+/*左部成员管理中的部门*/
+.member_department{
+	height: 60px;
+	cursor: pointer;
+	border-bottom: 1px #999999 solid;
+	padding-left: 58px;
+}
+
+.member_department img{
+	margin-top: 20px;
+}
+
+.member_department span{
+	font-size: 16px;
+	margin-left: 10px;
+	position: absolute;
+	margin-top: 21px;
+}
+
+/*左部成员管理中的内容*/
+.member_content{
+	height: 0;
+	overflow: hidden;
+	background-color: #333333;
+}
+
+.member_content ul li{
+	text-align: center;
+	height: 55px;
+	line-height: 55px;
+	border-left: 0;
+	border-right: 0;
+}
+
+.member_content ul li a{
+	color: #999999;
+}
+
+.member_content ul li a:hover{
+	color: #0066ff;
+}
+
+/*左部成员提示框*/
+.memberTip-box{
+	display: block;
+	position: absolute;
+	background: #009AFE;
+	color: #ffffff;
+	font-size:14px;
+	overflow:auto;
+}
+
+.memberTip-box p{
+	line-height: 22px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+/*中部内容区*/
+.content{
+	position: relative;
+	height: 1000px;
+}
+
+/*成员管理*/
+.memberManagement{
+	position: absolute;
+	left: 202px;
+	top: 0;
+}
+
+.memberManagement_nav{
+	padding-top: 10px;
+	padding-left: 25px;
+}
+
+.memberManagement ul{
+	margin-left: 24px;
+}
+
+.memberManagement ul li{
+	margin-right: 15px;
+}
+
+.memberManagement ul li a:hover{
+	color: #0066ff;
+}
+
+.memberManagement hr{
+	border: 1px dashed #999999;
+	width: 914px;
+	position: absolute;
+	margin-top: 30px;
+}
+
+/*成员管理中部的表格*/
+.memberManagement_info{
+	display: none;
+}
+.memberManagement_info table{
+	width: 800px;
+	height: 344px;
+	border-collapse: collapse;
+	margin: 60px 0 0 55px;
+	text-align: center;
+}
+
+.memberManagement_info table tr td{
+	border:1px solid #999999;
+}
+
+.memberManagement_info table .head{
+	background-color: #000000;
+	color: white;
+}
+
+.memberManagement_info p{
+	margin: 20px 0 0 120px;
+}
+
+.memberManagement_info .memberAnalysis span{
+	margin-left: 100px;
+}
+
+/*点击导航栏“成员管理”页面中部出现的网络中心成员总体情况*/
+.memberManagement-generalSituation {
+	width: 430px;
+	height: 250px;
+	margin: 40px 0 0 170px;
+	background: #252525;
+	border: white;
+	color: white;
+	line-height: 40px;
+	padding: 30px 80px;
+}
+.memberManagement-generalSituation .title{
+	text-align: center;
+}
+.memberManagement-generalSituation p span{
+	margin-right: 50px;
+}
+
+/*成员个人情况*/
+.memberManagement-personSituation{
+	width: 430px;
+	height: 380px;
+	padding: 10px 80px;
+	display: none;
+}
