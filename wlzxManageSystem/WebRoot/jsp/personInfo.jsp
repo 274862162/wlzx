@@ -24,65 +24,14 @@
 	<script type="text/javascript" src="js/b_utils.js"></script>
 	<script type="text/javascript" src="js/personInfo.js"></script>
 	<script type="text/javascript" src="js/navTag.js"></script>
-	<script>
-		
-	/* function createXMLHttpRequest(){
-			try{
-				return new XMLHttpRequest();
-			}catch(e){
-				try{
-					return ActiveXObject("Msxml2.XMLHTTP");
-				}catch(e){
-					try{
-						return ActiveXObject("Microsoft.XMLHTTP");
-					}catch(e){
-						alert("不支持ajax");
-						throw(e);
-					}
-				}
-			}
-		}
-		function sign(){
-			//值班签到
-			var deal = document.getElementById("check");
-			deal.onclick = function(){
-				var xmlHttp = createXMLHttpRequest();
-				xmlHttp.open("POST","SignServlet",true);
-				xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-				xmlHttp.send(null);
-				xmlHttp.onreadystatechange = function(){
-					if(xmlHttp.readyState==4 && xmlHttp.status==200){
-						var text = xmlHttp.responseText;
-						alert(text);
-					}
-				};
-			};			
-		}
-		function addNotice(){
-			var param = {};
-			param["content"] = $("#notice").val();
-			param["department"] = $("#department").val();
-			$.ajax({
-			   url  : "Circularize",  
-			   data : param,
-			   type : "post",                  
-			   cache: false,               
-			   dataType:"text",          
-			   error : function(x, er) {
-				    //请求失败时调用	
-				    alert("失败");	 
-			   },
-			   success :function(result){  //请求成功时调用。
-					alert(result);
-			   }
-			});
-		}
-		window.onload = function(){
-			//加载公告
-			infoShowHide('notice_department', 'notice_content', 200);
-			sign();
-		}; */
-		</script>
+	<script type="text/javascript">
+	$(function(){
+			var message = '<%=request.getAttribute("message")%>';
+			if(message!=null && message!="" && message!="null"){
+				alert(message);
+			}	
+	});
+	</script>
 </head>
 
 
@@ -108,7 +57,7 @@
         <div class="personInfo">
 			<div class="personInfo_nav f14"><a href="javascript:;">成员管理</a>&nbsp;&nbsp;>>&nbsp;&nbsp;个人信息</div>
             <ul class="none_list_style_type">
-            	<li class="f14 float_l"><a href="UserServlet?action=personInfo&option=update&option=check" class="f_blue0066ff">基本信息</a></li>
+            	<li class="f14 float_l"><a href="UserServlet?action=personInfo&option=check" class="f_blue0066ff">基本信息</a></li>
                 <li class="f14 float_l"><a href="jsp/changePassword.jsp">修改密码</a></li>
                 <!-- <li class="f14 float_l"><a href="UserServlet?action=objectInfo">物品登记信息</a></li> -->
             </ul>

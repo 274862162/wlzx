@@ -62,7 +62,7 @@ public class BasicInfoAction implements Action {
 			user.setShortTelephone(shortTel);
 			user.setMajor(major);
 			//调用Userdao的更新信息方法
-			boolean isUpdate=userDao.updateBasicInfo(user);
+			boolean isUpdate=userDao.updateUser(user);
 			if(isUpdate){
 				web = "jsp/finishInfo.jsp";//如果填写成功，跳到下一页
 			}else{

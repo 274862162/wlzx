@@ -62,10 +62,10 @@
 				getUserRoles();
 			});
 			$("#query").click(function(){
-				getUserRoles();
 				page = $("#page").val();
 				displayRecord = $("#displayRecord").val();
 				totalPage = 1;
+				getUserRoles();
 			});
 		});
 		function upPage(){
@@ -111,9 +111,8 @@
 					 		document.getElementById('recommendedPlan').style.display='block';
 					 		document.getElementById('modal-canvas').style.display='block';
 					 	});//重新绑定事件
-		 			    page = this.page;
-		 			    totalPage = this.totalPage;
-		 			    $("#pageCount").html("第"+page+"页，共"+totalPage+"页");
+		 			    $("#page").val(this.page);
+		 			    $("#totalPage").html(this.totalPage);
 		 			 });			 			 
 	 		   }
  			});
@@ -145,26 +144,6 @@
 						$("#role").html(sp);	
 	 		  	   }
 	 		  	 });
-				/* var xmlHttp = createXMLHttpRequest();
-				xmlHttp.open("POST","GetRole",true);
-				xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-				xmlHttp.send("userRoleID="+urID);
-				xmlHttp.onreadystatechange = function(){
-					if(xmlHttp.readyState==4 && xmlHttp.status==200){
-						var text = xmlHttp.responseText;
-						var role = eval("(" + text + ")");
-						var parent = document.getElementById("role");
-						var sp = "";
-						for(var i=0;i<role.length-1;i++){
-							sp = sp+ "<span><input type='radio' name='roleName' value='"+role[i].roleName+"' ";
-							if(role[i].roleName == role[role.length-1].roleName){
-								sp = sp+"checked";
-							}
-							sp = sp +"/>"+role[i].roleName+"</span>";
-						}		
-						parent.innerHTML = sp;		
-					}
-				}; */
 			};
     </script>
 
@@ -200,8 +179,9 @@
             <!--中间表单信息begin-->
             <div class="superManagement superManagement2 dutyRegister">
                 <form name="superManagement2Role" method="post" action="SuperManagementServlet?action=userRoleShow">
-                <div class="search">
-                用户名：<input type="text" name="userName" id="userName"/><input type="button" value="搜索" id="query"/>
+                <div class="search" style="margin-top:30px">
+              		  用户名：<input type="text" name="userName" id="userName"/>
+              		      <input type="button" value="搜索" id="query"/>
                 </div>
                     <div class="pn" style="margin-left: -320px;margin-top: -20px;">
                         <a href="javascript:;"><img src="images/dutyRegister/output.png" alt="导出" title="导出"/></a>
@@ -210,8 +190,8 @@
                         <a href="javascript:;" id="down"><img src="images/dutyRegister/next.png" alt="下一页" title="下一页"/></a>
                         <a href="javascript:;" id="endPage"><img src="images/dutyRegister/last.png" alt="最后一页" title="最后一页"/></a>
                         <span>
-                            当前为第<input type="text" placeholder="1" id="page"/>/<font id="totalPage"></font>页&nbsp;&nbsp;每页
-                            <select name="perNum" id="dispalyRecord">
+                            当前为第<input type="text" value="1" id="page"/>/<font id="totalPage"></font>页&nbsp;&nbsp;每页
+                            <select name="perNum" id="displayRecord">
                                 <option value="5">5</option>
                                 <option value="10">10</option>
                                 <option value="20">20</option>

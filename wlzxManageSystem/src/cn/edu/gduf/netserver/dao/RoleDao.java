@@ -175,4 +175,24 @@ public class RoleDao implements IRoleDao{
 	public int count(Role role) {
 		return 0;
 	}
+	
+	//通过角色名查询ID
+	public int getRoleID(String roleName){
+		int id=0;
+		sql= new StringBuffer("SELECT Id FROM role WHERE roleName=?");
+		try{
+			conn = DbUtil.getCon();
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setString(1,roleName);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				id=rs.getInt("Id");
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			DbUtil.close(rs, pstmt, conn);
+		}
+		return id;
+	}
 }

@@ -78,36 +78,86 @@ public class UserDao {
 		}
 		return b;
 	}
-	//更新用户信息的方法
-	public boolean updateBasicInfo(User user){
+	
+	//添加用户
+	public boolean insert(User user){
 		conn = null;
 		pstmt = null;
 		boolean b = true;
 		try{
 			conn= DbUtil.getCon();
-			pstmt = conn.prepareStatement("update user set age=?,dormitory=?,longTelephone=?,shortTelephone=?,interests=?,major=?,sno=?,name=?,sex=? where userName=?");
-			pstmt.setInt(1,user.getAge());
-			pstmt.setString(2,user.getDormitory());
-			pstmt.setString(3,user.getLongTelephone());
-			pstmt.setString(4,user.getShortTelephone());
-			pstmt.setString(5,user.getInterests());
-			pstmt.setString(6,user.getMajor());
-			pstmt.setString(7,user.getSno());
-			pstmt.setString(8,user.getName());
-			pstmt.setString(9, user.getSex());
-			pstmt.setString(10,user.getUserName());
-			if(pstmt.executeUpdate()>0)
-				System.out.println("更新成功");
+			pstmt = conn.prepareStatement("INSERT INTO user(userName,password,section) VALUES(?,?,?)");
+			pstmt.setString(1,user.getUserName());
+			pstmt.setString(2,user.getPassword());
+			pstmt.setString(3,user.getSection());
+			if(pstmt.executeUpdate()==0){
+				b=false;
+			}
 			pstmt.close();
 			conn.close();
 		}catch(Exception e){
 			e.printStackTrace();
-			System.out.print("更新失败。");
 			b=false;
 		}
 		return b;
 	}
+	
 	//更新用户信息的方法
+	public boolean updateUser(User user){
+		conn = null;
+		pstmt = null;
+		boolean b = true;
+		sql=new StringBuffer("update user set ");
+		if(user.getUserName()!=null){
+			sql.append("userName='"+user.getUserName()+"'");
+		}
+		if(user.getPassword()!=null){
+			sql.append(",password='"+user.getPassword()+"'");
+		}
+		if(user.getSection()!=null){
+			sql.append(",section='"+user.getSection()+"'");
+		}
+		if(user.getAge()!=0){
+			sql.append(",age="+user.getAge());
+		}
+		if(user.getDormitory()!=null){
+			sql.append(",dormitory='"+user.getDormitory()+"'");
+		}
+		if(user.getName()!=null){
+			sql.append(",name='"+user.getName()+"'");
+		}
+		if(user.getMajor()!=null){
+			sql.append(",major='"+user.getMajor()+"'");
+		}
+		if(user.getLongTelephone()!=null){
+			sql.append(",longTelephone='"+user.getLongTelephone()+"'");
+		}
+		if(user.getSex()!=null){
+			sql.append(",sex='"+user.getSex()+"'");
+		}
+		if(user.getShortTelephone()!=null){
+			sql.append(",shortTelephone='"+user.getShortTelephone()+"'");
+		}
+		if(user.getSno()!=null){
+			sql.append(",sno='"+user.getSno()+"'");
+		}
+		sql.append(" where Id="+user.getUserID());
+		try{
+			conn= DbUtil.getCon();
+			pstmt = conn.prepareStatement(sql.toString());
+			if(pstmt.executeUpdate()==0){
+				b=false;
+			}
+			pstmt.close();
+			conn.close();
+		}catch(Exception e){
+			e.printStackTrace();
+			/*System.out.print("更新失败。");*/
+			b=false;
+		}
+		return b;
+	}
+/*	//更新用户信息的方法
 		public boolean updateBasicInfoToUser(User user){
 			conn = null;
 			pstmt = null;
@@ -124,17 +174,15 @@ public class UserDao {
 				pstmt.setString(7,user.getName());
 				pstmt.setString(8, user.getSno());
 				pstmt.setString(9,user.getUserName());
-				if(pstmt.executeUpdate()>0)
-					System.out.println("更新成功");
+				
 				pstmt.close();
 				conn.close();
 			}catch(Exception e){
 				e.printStackTrace();
-				System.out.print("更新失败。");
 				b=false;
 			}
 			return b;
-		}
+		}*/
 	//修改密码的方法
 	public String changePassword(String userName,String password,String newPassword){
 		conn = null;
@@ -189,18 +237,18 @@ public class UserDao {
 		return ID;
 	}
 	//查询个人信息
-	public User getPersonInfo(String userName){
+	public User getPersonInfo(int userID){
 		User user = new User();
 		conn = null;
 		rs = null;
 		pstmt = null;
 		try{
 			conn= DbUtil.getCon();
-			pstmt = conn.prepareStatement("select name,sno,age,dormitory,sex,repArea,section,major,longTelephone,shortTelephone,interests from user where userName=?");
-			pstmt.setString(1,userName);
+			pstmt = conn.prepareStatement("select userName,name,sno,age,dormitory,sex,repArea,section,major,longTelephone,shortTelephone,interests from user where Id=?");
+			pstmt.setInt(1,userID);
 			rs=pstmt.executeQuery();
 			if(rs.next()){
-				user.setUserName(userName);
+				user.setUserName(rs.getString("userName"));
 				user.setSno(rs.getString("sno"));
 				user.setName(rs.getString("name"));
 				user.setDormitory(rs.getString("dormitory"));
@@ -243,7 +291,7 @@ public class UserDao {
 	
 	//分页显示所有用户信息
 	public List<User> getUser(PageBean pageBean){
-		sql=new StringBuffer("SELECT a.Id,a.userName,a.section,c.roleName FROM user a,user_role b,role c WHERE b.userID=a.Id and b.roleID=c.Id");
+		sql=new StringBuffer("SELECT a.Id,a.userName,a.section,c.roleName FROM user a,user_role b,role c WHERE b.userID=a.Id and b.roleID=c.Id ORDER BY Id");
 		if (pageBean != null) {
 			sql.append(" limit "+pageBean.getStart()+","+pageBean.getPageSize());
 		}
@@ -277,6 +325,7 @@ public class UserDao {
 			pstmt.setInt(1, userID);
 			rs = pstmt.executeQuery();
 			if(rs.next()){
+				user.setUserID(userID);
 				user.setUserName(rs.getString(1));
 				user.setSection(rs.getString(2));
 				user.setRole(rs.getString(3));
@@ -288,5 +337,26 @@ public class UserDao {
 		}
 		return user;
 	}
+	
+	//根据ID删除用户
+	public boolean delUserById(int userID) throws SQLException {
+		boolean b = true;
+		sql= new StringBuffer("DELETE FROM user WHERE Id=?");
+		try{
+			conn = DbUtil.getCon();
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setInt(1, userID);
+			if(pstmt.executeUpdate()==0){
+				b=false;
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+			b=false;
+		}finally{
+			DbUtil.close(rs, pstmt, conn);
+		}
+		return b;
+	}
+	
 }
 

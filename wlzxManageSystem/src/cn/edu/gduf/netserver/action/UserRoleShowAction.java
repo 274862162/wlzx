@@ -43,7 +43,6 @@ public class UserRoleShowAction implements Action {
 		//得到用户名
 		String userName = request.getParameter("userName");
 		if(userName==null||userName.equals("")){
-			//totalNum = userRoleDao.count();  
 			userRoleList = userRoleDao.getList(pageBean);
 		}else{
 			totalNum = 1;
@@ -56,10 +55,6 @@ public class UserRoleShowAction implements Action {
 		result.setTotalPage(totalPage);
 		JSONArray json = JSONArray.fromObject(result);
 		return json.toString();
-		/*request.setAttribute("userRoleList", userRoleList);
-		request.setAttribute("upDownPage", PageUtil.getUpAndDownPage(totalNum, Integer.parseInt(page), Integer.parseInt(PropertiesUtil.getValue("pageSize")), 0));
-		request.setAttribute("currentTotalPage", PageUtil.getCurrentAndTotalPage(totalNum, Integer.parseInt(page), Integer.parseInt(PropertiesUtil.getValue("pageSize"))));
-		return "jsp/superManagement2.jsp";*/
 	}
 
 }

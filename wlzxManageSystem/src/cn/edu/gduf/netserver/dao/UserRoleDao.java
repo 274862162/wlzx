@@ -62,8 +62,26 @@ public class UserRoleDao {
 		return roleList;
 	}
 	
-	//修改用户的角色
-	public int changeUserRole(UserRole userRole) throws SQLException {
+	//插入用户角色信息
+	public int insertUserRole(UserRole userRole) throws SQLException {
+		int i = 0;	//影响的条数
+		sql= new StringBuffer("INSERT INTO user_role(userID,roleID) values(?,?)");
+		try{
+			conn = DbUtil.getCon();
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setInt(1, userRole.getUserID());
+			pstmt.setInt(2, userRole.getRoleID());
+			i = pstmt.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			DbUtil.close(rs, pstmt, conn);
+		}
+		return i;
+	}
+		
+	//修改用户的角色（设置角色）
+	public int UpdateUserRoleByID(UserRole userRole) throws SQLException {
 		int i = 0;	//影响的条数
 		sql= new StringBuffer("UPDATE user_role SET roleID=(SELECT Id FROM role WHERE roleName=?) WHERE Id=?");
 		try{
@@ -73,6 +91,24 @@ public class UserRoleDao {
 			pstmt.setInt(2, userRole.getID());
 			i = pstmt.executeUpdate();
 			System.out.println(i);
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally{
+			DbUtil.close(rs, pstmt, conn);
+		}
+		return i;
+	}
+	
+	//修改用户的角色（设置角色）
+	public int UpdateUserRoleByUserID(UserRole userRole) throws SQLException {
+		int i = 0;	//影响的条数
+		sql= new StringBuffer("UPDATE user_role SET roleID=(SELECT Id FROM role WHERE roleName=?) WHERE userID=?");
+		try{
+			conn = DbUtil.getCon();
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setString(1, userRole.getRoleName());
+			pstmt.setInt(2, userRole.getUserID());
+			i = pstmt.executeUpdate();
 		}catch(SQLException e){
 			e.printStackTrace();
 		}finally{
@@ -122,5 +158,25 @@ public class UserRoleDao {
 			DbUtil.close(rs, pstmt, conn);
 		}
 		return roleList;
+	}
+	
+	//根据userID删除记录
+	public boolean delByUserId(int userID) throws SQLException {
+		boolean b = true;
+		sql= new StringBuffer("DELETE FROM user_role WHERE userID=?");
+		try{
+			conn = DbUtil.getCon();
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setInt(1, userID);
+			if(pstmt.executeUpdate()==0){
+				b=false;
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+			b=false;
+		}finally{
+			DbUtil.close(rs, pstmt, conn);
+		}
+		return b;
 	}
 }

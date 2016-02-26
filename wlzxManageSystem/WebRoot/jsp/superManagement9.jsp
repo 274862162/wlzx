@@ -34,6 +34,10 @@
 		var displayRecord = 5;
 		var totalPage = 1;
 		$(function(){
+			var message = '<%=request.getAttribute("message")%>';
+			if(message!=null && message!="" && message!="null"){
+				alert(message);
+			}
 			showRole();
 			$("#up").click(function(){
 				upPage();
@@ -166,100 +170,6 @@
  			});
 		};
     </script>
-	<%-- <script type="text/javascript">
-    function createXMLHttpRequest(){
-			try{
-				return new XMLHttpRequest();
-			}catch(e){
-				try{
-					return ActiveXObject("Msxml2.XMLHTTP");
-				}catch(e){
-					try{
-						return ActiveXObject("Microsoft.XMLHTTP");
-					}catch(e){
-						alert("不支持ajax");
-						throw(e);
-					}
-				}
-			}
-		}
-		window.onload = function(){
-			var message = '<%=request.getAttribute("message")%>';
-			if(message!=null && message!="" && message!="null"){
-				alert(message);
-			}
-			//值班签到
-			var deal = document.getElementById("check");
-			deal.onclick = function(){
-				var xmlHttp = createXMLHttpRequest();
-				xmlHttp.open("POST","SignServlet",true);
-				xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-				xmlHttp.send(null);
-				xmlHttp.onreadystatechange = function(){
-					if(xmlHttp.readyState==4 && xmlHttp.status==200){
-						var text = xmlHttp.responseText;
-						alert(text);
-					}
-				};
-			};			
-		};
-			//显示模态框的内容(修改的时候)
-			function show(uID){
-		    	var userID =document.getElementById("userID");
-		    	userID.value = uID;
-				var xmlHttp = createXMLHttpRequest();
-				xmlHttp.open("POST","GetUser",true);
-				xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-				xmlHttp.send("userID="+uID);
-				xmlHttp.onreadystatechange = function(){
-					if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
-						var text = xmlHttp.responseText;
-						var user = eval("(" + text + ")");
-						var userName = document.getElementById("userName");
-						userName.value = user.userName;
-						var temp = 0;
-						if(user.section == "所有部"){
-							temp = 1;
-						}else if(user.section == "技术部"){
-							temp = 2;
-						}else if(user.section == "资源部"){
-							temp = 3;
-						}else if(user.section == "综合部"){
-							temp = 4;
-						}
-						var section = document.getElementById("section");
-						section.getElementsByTagName('option')[2].selected = true;						
-						var role = document.getElementById("role");	
-						role.getElementsByTagName('option')[0].innerHTML = user.role;		
-					}
-				};
-			};
-			//角色联动
-			function showRole(i){
-			//alert("hhha");
-				var xmlHttp = createXMLHttpRequest();
-				xmlHttp.open("POST","GetRole",true);
-				xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-				xmlHttp.send(null);
-				xmlHttp.onreadystatechange = function(){
-					if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
-						var text = xmlHttp.responseText;
-						var role = eval("(" + text + ")");
-						var parent = document.getElementById("role");
-						alert("i="+i);
-						if(i == 2){
-							parent = document.getElementById("role2");
-						}
-						var option = "";
-						for(var i=0;i<role.length-2;i++){
-							option = option+ "<option value='"+role[i].roleName+"' ";
-							option = option +"/>"+role[i].roleName+"</option>";
-						}		
-						parent.innerHTML = option;
-					}
-				};
-			};
-    </script> --%>
 </head>
 
 
@@ -324,7 +234,7 @@
     <div id="recommendedPlan">
         <div class="recommendedPlan-title">修改账户信息<img src="images/surveySystem/delete.png" title="close" alt="close" class="close" id="close-button" /></div>
         <div class="f14 recommendedPlan">
-            <form name="superManagement9Form" method="post" action="CommonServlet_redirect?action=updateUser">
+            <form name="superManagement9Form" method="post" action="CommonServlet_forward?action=updateUser">
                 <div class="queryWage superManagement4 superManagement7 superManagement8Modal">
                     <table>
                         <tr><td>账户名</td><td><input type="text" id="userName" name="userName" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
@@ -364,7 +274,7 @@
     <div id="recommendedPlan2">
         <div class="recommendedPlan-title">添加账户<img src="images/surveySystem/delete.png" title="close" alt="close" class="close" id="close-button2" /></div>
         <div class="f14 recommendedPlan">
-            <form name="superManagement9Form" method="post" action="CommonServlet_redirect?action=addUser">
+            <form name="superManagement9Form" method="post" action="CommonServlet_forward?action=addUser">
                 <div class="queryWage superManagement4 superManagement7 superManagement8Modal">
                     <table>
                         <tr><td>账户名</td><td><input type="text" name="userName" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
@@ -373,7 +283,7 @@
                         <tr>
                             <td>部门</td>
                             <td>
-                                <select name="departurement">
+                                <select name="section">
                                 <option value="所有部">所有部</option>
                                 <option value="技术部">技术部</option>
                                 <option value="资源部">资源部</option>

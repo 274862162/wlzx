@@ -2,6 +2,7 @@ package cn.edu.gduf.netserver.action;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -21,15 +22,17 @@ public class PersonInfoAction implements Action {
 			e.printStackTrace();
 		}
 		HttpSession session = request.getSession();
-		String userName = (String)session.getAttribute("userName");
+		int userID = (Integer)session.getAttribute("id");
 		UserDao userDao = new UserDao();
 		User user = new User();
 		String option = request.getParameter("option");//判断处理类型
-		if(option.equals("check")){//如果是查看
-			user = userDao.getPersonInfo(userName);
+		//如果是查看
+		if(option.equals("check")){
+			user = userDao.getPersonInfo(userID);
 			request.setAttribute("user",user);
-			return "jsp/personInfo.jsp";
-		}else if(option.equals("update")){//如果是更新	
+			//return "jsp/personInfo.jsp";
+			
+		}else if(option.equals("update")){	//如果是更新	
 			int age = 0;
 			if(request.getParameter("age")!=null){
 				age = Integer.parseInt(request.getParameter("age"));
@@ -41,7 +44,6 @@ public class PersonInfoAction implements Action {
 					byte[] str = name.getBytes("ISO-8859-1");  
 					name =new String(str,"utf-8");
 				} catch (UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}  
 			}
@@ -72,10 +74,9 @@ public class PersonInfoAction implements Action {
 					e.printStackTrace();
 				}  
 			}
-			System.out.println("dormitory"+dormitory);
 			String longPhone = request.getParameter("longPhone");
 			String shortPhone = request.getParameter("shortPhone");
-			user.setUserName(userName);
+			user.setUserID(userID);
 			user.setSno(sno);
 			user.setName(name);
 			user.setDormitory(dormitory);
@@ -83,10 +84,17 @@ public class PersonInfoAction implements Action {
 			user.setMajor(major);
 			user.setLongTelephone(longPhone);
 			user.setShortTelephone(shortPhone);
-			userDao.updateBasicInfoToUser(user);//更新个人信息
-			return "jsp/dutyRegister.jsp";
+			if(userDao.updateUser(user)){
+				request.setAttribute("message", "修改成功");
+			}else{
+				request.setAttribute("message", "修改失败");
+			}
+			//取更新之后的信息
+			user = userDao.getPersonInfo(userID);
+			request.setAttribute("user",user);
 		}else{
-			return "jsp/dutyRegister.jsp";
+			//return "jsp/dutyRegister.jsp";
 		}
+		return "jsp/personInfo.jsp";
 	}
 }

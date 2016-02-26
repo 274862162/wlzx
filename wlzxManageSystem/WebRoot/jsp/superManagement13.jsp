@@ -110,9 +110,9 @@
         <div class="personInfo">
 			<div class="personInfo_nav f14">超级管理&nbsp;&nbsp;>>&nbsp;&nbsp;后台管理</div>
             <ul class="none_list_style_type">
-            	<li class="f14 float_l"><a href="javascript:;">网管账号管理</a></li>
-                <li class="f14 float_l"><a href="javascript:;">报修系统管理</a></li>
-                <li class="f14 float_l"><a href="javascript:;" class="f_blue0066ff">公告管理</a></li>
+            	<li class="f14 float_l"><a href="jsp/superManagement9.jsp">网管账号管理</a></li>
+                <li class="f14 float_l"><a href="jsp/superManagement10.jsp">报修系统管理</a></li>
+                <li class="f14 float_l"><a href="jsp/superManagement13.jsp" class="f_blue0066ff">公告管理</a></li>
             </ul>   
             <hr/>
             <div class="queryWage superManagement4  backAnnounce">

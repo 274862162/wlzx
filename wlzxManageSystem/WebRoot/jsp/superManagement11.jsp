@@ -53,21 +53,21 @@
         <div class="personInfo superManagement20">
 			<div class="personInfo_nav f14">超级管理&nbsp;&nbsp;>>&nbsp;&nbsp;后台管理</div>
             <ul class="none_list_style_type">
-            	<li class="f14 float_l"><a href="javascript:;">网管账号管理</a></li>
-                <li class="f14 float_l"><a href="javascript:;" class="f_blue0066ff">报修系统管理</a></li>
-                <li class="f14 float_l"><a href="javascript:;">公告管理</a></li>
+            	<li class="f14 float_l"><a href="jsp/superManagement9.jsp">网管账号管理</a></li>
+                <li class="f14 float_l"><a href="jsp/superManagement10.jsp" class="f_blue0066ff">报修系统管理</a></li>
+                <li class="f14 float_l"><a href="jsp/superManagement13.jsp">公告管理</a></li>
                 <br/>
                 <span class="f14">
-                    <a href="javascript:;">楼栋管理 &nbsp;</a>
-                    <a href="javascript:;" class="f_blue0066ff">用户管理 &nbsp;</a>
-                    <a href="javascript:;">统计分析</a>
+                    <a href="jsp/superManagement10.jsp">楼栋管理 &nbsp;</a>
+                    <a href="jsp/superManagement11.jsp" class="f_blue0066ff">用户管理 &nbsp;</a>
+                    <a href="jsp/superManagement12.jsp">统计分析</a>
                 </span>
             </ul>   
             <hr/>
             <div class="queryWage superManagement4">
                 <form name="userManage" method="post" action="">
                     <!-- 搜索栏begin -->
-                    <div class="searchBar">
+                    <div class="searchBar" style="margin-top:20px">
                         <span>用户名<input type="text" name="userNo" /></span>
                         <span>用户姓名<input type="text" name="userName" /></span>
                         <span><input type="submit" value="搜索" class="searchButton" /></span>
