@@ -112,7 +112,9 @@
 			 			   	<td>'+this.longTelephone+'  '+this.shortTelephone+'</td>\
 			 			   	<td>'+this.section+'</td>\
 			 			   	<td>'+this.repArea+'</td>\
-                            <td><a href="javascript:checkDutyRegister('+this.userID+');" id="checkButton"><img src="images/dutyRegister/check.png" title="查看" alt="查看"/></a></td>');
+                            <td><a href="javascript:checkDutyRegister('+this.userID+');" id="checkButton"><img src="images/dutyRegister/check.png" title="查看" alt="查看"/></a>\
+                            <a href="javascript:dealingDutyRegister('+this.userID+');" id="checkButton"><img src="images/dutyRegister/handle.png" title="设置" alt="设置"/></a>\
+                            <a href="javascript:dealingDutyRegister('+this.userID+');" id="checkButton"><img src="images/dutyRegister/del.png" title="删除" alt="删除"/></a></td>');
 			 			   	});
 			 			//page = this.page;
 			 			totalPage = this.totalPage;
