@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import com.mysql.jdbc.Statement;
+
 import cn.edu.gduf.netserver.dao.ISurveySystemSaveQusnDao;
 import cn.edu.gduf.netserver.domain.CreateQuestionnaire;
 import cn.edu.gduf.netserver.domain.QusnnQuestion;
@@ -30,7 +33,7 @@ public class SurveySystemSaveQusnDaoImpl implements ISurveySystemSaveQusnDao{
 			e.printStackTrace();
 		}		
 		try {			
-			ps=conn.prepareStatement(quesnnSQL);
+			ps=conn.prepareStatement(quesnnSQL,Statement.RETURN_GENERATED_KEYS);
 			ps.setInt(1, qusn.getUserID());
 			ps.setString(2,qusn.getQuesnnTitle());
 			ps.setString(3, qusn.getQuesnnTime());
@@ -70,7 +73,7 @@ public class SurveySystemSaveQusnDaoImpl implements ISurveySystemSaveQusnDao{
 		}	
 		try {
 			for(int i=0;i<ques.size();i++){
-				ps=conn.prepareStatement(questionSQL);
+				ps=conn.prepareStatement(questionSQL,Statement.RETURN_GENERATED_KEYS);
 				ps.setString(1, ques.get(i).getQuestionTitle());
 				ps.setString(2, ques.get(i).getSectionA());
 				ps.setString(3, ques.get(i).getSectionB());
