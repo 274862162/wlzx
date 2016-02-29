@@ -25,16 +25,12 @@ public class ChangeUserRoleAction implements Action {
 			userRoleID = Integer.parseInt(request.getParameter("userRoleID"));
 		}
 		String roleName = request.getParameter("roleName");
-		/*if(roleName!=null){
-			byte[] str = roleName.getBytes("ISO-8859-1");  
-			roleName =new String(str,"utf-8");  
-		}*/
 		UserRole userRole = new UserRole();
 		userRole.setRoleName(roleName);
-		userRole.setID(userRoleID);
+		userRole.setUserID(userRoleID);
 		UserRoleDao userRoleDao = new UserRoleDao();
 		try {
-			int i = userRoleDao.changeUserRole(userRole);
+			int i = userRoleDao.UpdateUserRoleByUserID(userRole);
 			if(i>0){
 				request.setAttribute("message", "修改成功");
 			}else{
