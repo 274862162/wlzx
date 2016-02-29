@@ -76,16 +76,8 @@
 		 	   },
 			   success :function(result){  //请求成功时调用。
 			   		$("#userName").val(result.userName);
-			   		$.each($("#section option"),function(){
-			   			if($(this).val() == result.section) {  
-                			$(this).selected = true; 
-                		}
-			   		});
-			   		$.each($("#role option"),function(){
-			   			if($(this).val() == result.role) {  
-                			$(this).selected = true; 
-                		}
-			   		});
+			   		$("#section").val(result.section);
+			   		$("#role").val(result.role);
 		 	   }
 	 		});
 	 	};
@@ -253,7 +245,7 @@
                         <tr>
                             <td>角色</td>
                             <td>
-                                <select name="role" id="role" onclick="showRole(1);">
+                                <select name="role" id="role">
                                 <option></option>
                                 </select>
                             </td>
@@ -294,7 +286,7 @@
                         <tr>
                             <td>角色</td>
                             <td>
-                                <select name="role" id="role2" onclick="showRole(2);">
+                                <select name="role" id="role2">
                                 <option>请选择角色</option>
                                 </select>
                             </td>

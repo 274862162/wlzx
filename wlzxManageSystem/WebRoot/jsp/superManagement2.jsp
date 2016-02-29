@@ -113,6 +113,8 @@
 					 	});//重新绑定事件
 		 			    $("#page").val(this.page);
 		 			    $("#totalPage").html(this.totalPage);
+		 			    page = this.page;
+		 			    totalPage = this.totalPage;
 		 			 });			 			 
 	 		   }
  			});

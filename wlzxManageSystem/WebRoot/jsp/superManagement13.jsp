@@ -27,44 +27,16 @@
     <script type="text/javascript" src="js/notice.js"></script>
     <script type="text/javascript" src="js/b_utils.js"></script>
 	<script type="text/javascript">
-    function createXMLHttpRequest(){
-			try{
-				return new XMLHttpRequest();
-			}catch(e){
-				try{
-					return ActiveXObject("Msxml2.XMLHTTP");
-				}catch(e){
-					try{
-						return ActiveXObject("Microsoft.XMLHTTP");
-					}catch(e){
-						alert("不支持ajax");
-						throw(e);
-					}
-				}
-			}
-		}
-		function sign(){
-			//值班签到
-			var deal = document.getElementById("check");
-			deal.onclick = function(){
-				var xmlHttp = createXMLHttpRequest();
-				xmlHttp.open("POST","SignServlet",true);
-				xmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-				xmlHttp.send(null);
-				xmlHttp.onreadystatechange = function(){
-					if(xmlHttp.readyState==4 && xmlHttp.status==200){
-						var text = xmlHttp.responseText;
-						alert(text);
-					}
-				};
-			};			
-		}
-		function addNotice(){
+    $(function(){
+		$("#addNotice").click(function(){
+			addNotice();
+		});
+    	function addNotice(){
 			var param = {};
 			param["content"] = $("#notice").val();
 			param["department"] = $("#department").val();
 			$.ajax({
-			   url  : "Circularize",  
+			   url  : "CommonServlet_ajax?action=addNotice",  
 			   data : param,
 			   type : "post",                  
 			   cache: false,               
@@ -78,11 +50,7 @@
 			   }
 			});
 		}
-		window.onload = function(){
-			//加载公告
-			infoShowHide('notice_department', 'notice_content', 200);
-			sign();
-		};
+    });
     </script>
 </head>
 
@@ -133,7 +101,7 @@
                     <tr><td colspan="2"><textarea name="content" id="notice"></textarea></td></tr>
                 </table>
                 <div class="superManagement16">
-                    <input type="button" value="发布" onclick="javascript:addNotice();"/>
+                    <input type="button" value="发布" id="addNotice"/>
                 </div>
                 </form>
             </div>
