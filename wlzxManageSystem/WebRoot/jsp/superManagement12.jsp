@@ -4,7 +4,7 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="notice" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="foot" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html style="height:100%;">
 <head>
     <!-- The site is designed by 网络中心.Written by tmn-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -22,26 +22,27 @@
 	<link rel="stylesheet" type="text/css" href="css/queryWage.css" />
     <link rel="stylesheet" type="text/css" href="css/superManagement4.css" />
     <link rel="stylesheet" type="text/css" href="css/analyze.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/notice.js"></script>
 	<script type="text/javascript" src="js/b_utils.js"></script>
 </head>
 
 
-<body>
+<body style="height:100%;">
 <!--整体包围-->
-<div class="wrapper margin0_auto">
+<div class="wrapper margin0_auto" style="height:100%;">
 	<head:header></head:header>
     <nav:nav></nav:nav>
 	
 	<!--中部内容区begin-->
-	<div class="content">
+	<div class="content" style="height:100%;">
     	<!--左部菜单begin-->
-        <div class="menu">
-            <ul class="none_list_style_type">
-                <li><a href="SuperManagementServlet?action=roleShow">角色管理</a></li>
-                <li><a href="SuperManagementServlet?action=userRoleShow">设置用户角色</a></li>
-                <li><a href="SuperManagementServlet?action=webNoticeShow">前台管理</a></li>
-                <li><a href="SuperManagementServlet?action=userShow" class="active">后台管理</a></li>
+        <div class="menu" style="height:100%;float:left">
+            <ul class="none_list_style_type" style="height:100%;">
+            	<li><a href="jsp/superManagement1.jsp"><img alt="" src="images/superManagement/1.png"/><p>角色管理</p></a></li>
+                <li><a href="jsp/superManagement2.jsp"><img alt="" src="images/superManagement/2.png"/><p>设置角色</p></a></li>
+                <li><a href="jsp/superManagement3.jsp"><img alt="" src="images/superManagement/3.png"/><p>前台管理</p></a></li>
+                <li><a href="jsp/superManagement9.jsp"  class="active"><img alt="" src="images/superManagement/4.png"/><p>后台管理</p></a></li>
             </ul>
         </div>	
     	<!--左部菜单end-->

@@ -77,6 +77,7 @@
 			   success :function(result){  //请求成功时调用。
 			   		$("#userName").val(result.userName);
 			   		$("#section").val(result.section);
+			   		$("#password").val(result.password);
 			   		$("#role").val(result.role);
 		 	   }
 	 		});

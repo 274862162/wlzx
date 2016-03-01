@@ -34,8 +34,9 @@ public class AddUserAction implements Action {
 			user.setUserName(userName);
 			user.setPassword(password);
 			user.setSection(section);
-			
-			if(userDao.insert(user)){
+			if(userDao.getUserID(user)!=0){
+				request.setAttribute("message", "该用户已存在");
+			}else if(userDao.insert(user)){
 				request.setAttribute("message", "添加用户成功");
 				UserRoleDao userRoleDao = new UserRoleDao();
 				RoleDao roleDao = new RoleDao();

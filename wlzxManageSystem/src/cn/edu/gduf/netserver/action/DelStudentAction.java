@@ -10,7 +10,7 @@ import cn.edu.gduf.netserver.dao.UserDao;
 import cn.edu.gduf.netserver.dao.UserRoleDao;
 import cn.edu.gduf.netserver.dao.impl.StudentDaoImpl;
 
-public class DelUserAction implements Action {
+public class DelStudentAction implements Action {
 
 	public String execute(HttpServletRequest request,
 			HttpServletResponse response){
@@ -19,21 +19,16 @@ public class DelUserAction implements Action {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-		int userID = 0;
-		if(request.getParameter("userID")!=null){
-			userID = Integer.parseInt(request.getParameter("userID"));//获得用户ID
+		int studentID = 0;
+		if(request.getParameter("studentID")!=null){
+			studentID = Integer.parseInt(request.getParameter("studentID"));//获得用户ID
 		}
-		UserDao userDao =new UserDao();
-		UserRoleDao userRoleDao = new UserRoleDao();
+		StudentDaoImpl studentDao =new StudentDaoImpl();
 		String message = "";
-		try {
-			if(userRoleDao.delByUserId(userID) && userDao.delUserById(userID)){
-				message = "删除成功";			
-			}else{
-				message = "删除不成功，请重试";
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+		if(studentDao.deleteStudentById(studentID)>0){
+			message = "删除成功";			
+		}else{
+			message = "删除不成功，请重试";
 		}
 		return message;
 	}

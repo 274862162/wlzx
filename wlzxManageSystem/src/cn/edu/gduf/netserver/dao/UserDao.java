@@ -244,23 +244,28 @@ public class UserDao {
 		pstmt = null;
 		try{
 			conn= DbUtil.getCon();
-			pstmt = conn.prepareStatement("select userName,name,sno,age,dormitory,sex,repArea,section,major,longTelephone,shortTelephone,interests from user where Id=?");
+			pstmt = conn.prepareStatement("select a.userName,a.name,a.sno,a.age,a.dormitory,a.sex,b.areaName,a.section,a.major,a.longTelephone,a.shortTelephone,a.interests from user a,area b where a.Id=b.userID and a.Id=?");
 			pstmt.setInt(1,userID);
 			rs=pstmt.executeQuery();
 			if(rs.next()){
-				user.setUserName(rs.getString("userName"));
-				user.setSno(rs.getString("sno"));
-				user.setName(rs.getString("name"));
-				user.setDormitory(rs.getString("dormitory"));
-				user.setAge(rs.getInt("age"));
-				user.setSex(rs.getString("sex"));
-				user.setRepArea(rs.getString("repArea"));
-				user.setSection(rs.getString("section"));
-				user.setMajor(rs.getString("major"));
-				user.setLongTelephone(rs.getString("longTelephone"));
-				user.setShortTelephone(rs.getString("shortTelephone"));
-				user.setInterests(rs.getString("interests"));
+				user.setUserName(rs.getString(1));
+				user.setSno(rs.getString(2));
+				user.setName(rs.getString(3));
+				user.setDormitory(rs.getString(4));
+				user.setAge(rs.getInt(5));
+				user.setSex(rs.getString(6));
+				user.setRepArea(rs.getString(7));
+				user.setSection(rs.getString(8));
+				user.setMajor(rs.getString(9));
+				user.setLongTelephone(rs.getString(10));
+				user.setShortTelephone(rs.getString(11));
+				user.setInterests(rs.getString(12));
 			}
+			/*pstmt = conn.prepareStatement("select areaName from area where userID="+userID);
+			rs=pstmt.executeQuery();
+			if(rs.next()){
+				user.setRepArea(rs.getString("areaName"));
+			}*/
 			pstmt.close();
 			conn.close();
 		}catch(Exception e){
@@ -317,7 +322,7 @@ public class UserDao {
 	}
 	//通过ID获得User信息
 	public User getUserById(int userID) throws SQLException {
-		sql= new StringBuffer("SELECT a.userName,a.section,c.roleName FROM user a,user_role b,role c WHERE b.userID=a.Id and b.roleID=c.Id and a.Id=?");
+		sql= new StringBuffer("SELECT a.userName,a.section,a.password,c.roleName FROM user a,user_role b,role c WHERE b.userID=a.Id and b.roleID=c.Id and a.Id=?");
 		User user = new User();
 		try{
 			conn = DbUtil.getCon();
@@ -328,7 +333,8 @@ public class UserDao {
 				user.setUserID(userID);
 				user.setUserName(rs.getString(1));
 				user.setSection(rs.getString(2));
-				user.setRole(rs.getString(3));
+				user.setPassword(rs.getString(3));
+				user.setRole(rs.getString(4));
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -358,5 +364,24 @@ public class UserDao {
 		return b;
 	}
 	
+	//取所有用户ID
+	public List<User> getAllUser(){
+		List<User> userList = new ArrayList<User>();
+		try {
+			conn = DbUtil.getCon();
+			pstmt = conn.prepareStatement("select id,userName from user");
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				User user = new User();
+				user.setUserID(rs.getInt(1));
+				user.setUserName(rs.getString(2));
+				userList.add(user);
+				}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			DbUtil.close(rs, pstmt, conn);
+		}
+		return userList;
+	}
 }
 
