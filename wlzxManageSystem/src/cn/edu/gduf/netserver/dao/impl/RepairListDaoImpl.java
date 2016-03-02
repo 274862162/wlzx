@@ -6,12 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import cn.edu.gduf.netserver.dao.IRepairListDao;
 import cn.edu.gduf.netserver.dao.IRepairResultDoneDao;
 import cn.edu.gduf.netserver.domain.PageBean;
 import cn.edu.gduf.netserver.domain.RepairAlyResult;
+import cn.edu.gduf.netserver.domain.RepairAnalyze;
 import cn.edu.gduf.netserver.domain.RepairList;
 import cn.edu.gduf.netserver.util.DbUtil;
 
@@ -555,4 +557,35 @@ public class RepairListDaoImpl implements IRepairListDao {
 			}
 		return alydata;
 	} 
+	
+	public ArrayList<RepairAnalyze> alyReapairByBuilding(Date startTime,Date endTime) {
+		StringBuffer querySql=new StringBuffer("select count(*),stuBuilding from repair_list where id is not null");		
+		Connection conn=null;
+		PreparedStatement ps=null;
+		ResultSet rs=null;
+		ArrayList<RepairAnalyze> repairAnalyzeList=new ArrayList<RepairAnalyze>();	
+		if(startTime!=null){
+			querySql.append(" and repairTime>='"+startTime+"'");
+		}
+		if(endTime!=null){
+			querySql.append(" and repairTime<='"+endTime+"'");
+		}
+		querySql.append(" group by stuBuilding");
+		try{
+			conn=DbUtil.getCon();
+			ps=conn.prepareStatement(querySql.toString());
+			rs=ps.executeQuery();
+			while(rs.next()){
+				RepairAnalyze repairAnalyze = new RepairAnalyze();
+				repairAnalyze.setCount(rs.getInt(1));
+				repairAnalyze.setStuBuilding(rs.getString(2));
+				repairAnalyzeList.add(repairAnalyze);
+			}			
+			}catch(Exception e){
+				e.printStackTrace();
+			}finally{
+				DbUtil.close(rs, ps, conn);
+			}
+		return repairAnalyzeList;
+	}
 }

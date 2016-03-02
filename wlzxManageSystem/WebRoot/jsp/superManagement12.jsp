@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="author" content="网络中心学生技术团队">
     <meta name="description" content="xxxxxxxxxxxxxxxxxxx">
-    <title>superManagement23</title>
+    <title>报修系统管理_统计分析</title>
     <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+ "://" +request.getServerName()+ ":" +request.getServerPort()+path+ "/" ;
@@ -21,10 +21,57 @@
     <link rel="stylesheet" type="text/css" href="css/personInfo.css" />
 	<link rel="stylesheet" type="text/css" href="css/queryWage.css" />
     <link rel="stylesheet" type="text/css" href="css/superManagement4.css" />
+   <!--  <link rel="stylesheet" type="text/css" href="css/repairsManagement.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/analyze.css" />
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/notice.js"></script>
 	<script type="text/javascript" src="js/b_utils.js"></script>
+	<script type="text/javascript" src="js/Chart.js"></script>
+	<script type="text/javascript" src="js/chart_data.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		
+		$("#analyze").click(function(){
+			getData();
+		});
+		//取图表数据
+		function getData(){
+			var param = {};
+			param.startTime = $("#startTime").val();
+			param.endTime = $("#endTime").val();
+			$.ajax({
+	 		   url  : "CommonServlet_ajax?action=repairAnalyze",  
+	 		   data : param,
+	 		   type : "post",                  
+	 		   cache: false,
+	 		   dataType:"json", 
+	 		   error : function(x, er){
+	 			    //请求失败时调用	
+	 			    alert("请求失败"); 
+	 		   },
+	 		   success :function(result){  //请求成功时调用。 
+	 		   		var labels = new Array();
+	 		   		var datasets = new Array();
+	 		   		$.each(result,function(){
+	 		   			labels.push(this.stuBuilding);
+	 		   			datasets.push(this.count);
+	 		   		});
+	 		   		var data = {
+						labels : labels ,
+						datasets : [
+						{
+							fillColor : "rgba(151,187,205,0.5)",
+							strokeColor : "rgba(151,187,205,1)",
+							data : datasets
+						}]
+					};
+					var ctx = document.getElementById("myChart").getContext("2d");
+					var myNewChart=new Chart(ctx).Bar(data);		 
+	 		   }
+ 			});
+		};
+	});
+	</script>
 </head>
 
 
@@ -64,13 +111,22 @@
             <hr/>
              <div class="superManagement4 analyze">
                <form>
-                    <span>楼栋:<input type="text" name="buildingNumber"/></span>
-                    <span>时间:<input type="text" name="startTime"/>--<input type="text" name="endTime"></span>
-                    <span>报修内容:<input type="text" name="content"/></span>
-                    <span>维修人员:<input type="text" name="responsePerson"/></span>
-                    <div class="button"><input type="button" value="分析"></div>
-                    <img src="images/superManagement/superManegement23.png" alt="analyze" title="analyze"/>
+                    <!-- <span>根据:
+                    	<select class="item" id="type" style="height:24px">
+                        <option value="1">楼栋</option>
+                        <option value="2">维修人员</option>
+                        </select>
+					</span> -->
+                    <span>时间:<input type="date" name="startTime" id="startTime" placeholder="年/月/日" style="width:130px"/>
+                    -- <input type="date" name="endTime" id="endTime" placeholder="年/月/日" style="width:130px"/></span>
+                  	<span><input type="button" value="分析" id="analyze"></span>
+                    <!-- <span>维修人员:<input type="text" name="responsePerson"/></span> -->
+                   <!--  <div class="button"><input type="button" value="分析"></div> -->
+                    <!-- <img src="images/superManagement/superManegement23.png" alt="analyze" title="analyze"/> -->
                </form>
+               <div style="margin-top:30px">
+               		<canvas id="myChart" width="400" height="400"></canvas>
+               </div>
             </div>
         </div>	
     	<!--个人信息end-->

@@ -2,10 +2,12 @@ package cn.edu.gduf.netserver.dao;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import cn.edu.gduf.netserver.domain.PageBean;
 import cn.edu.gduf.netserver.domain.RepairAlyResult;
+import cn.edu.gduf.netserver.domain.RepairAnalyze;
 import cn.edu.gduf.netserver.domain.RepairList;
 
 /**
@@ -156,6 +158,13 @@ public interface IRepairListDao {
 	 * @return 统计数据
 	 */
 	public IRepairResultDoneDao alyReapairByY(String year);
+	
+	/**
+	 * 根据楼栋分析报修数据
+	 * @param startTime,endTime 统计时间段
+	 * @return 统计数据
+	 */
+	public ArrayList<RepairAnalyze> alyReapairByBuilding(Date startTime,Date endTime);
 	}
 
 
