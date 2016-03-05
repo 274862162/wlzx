@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="css/personInfo.css" />
 	<link rel="stylesheet" type="text/css" href="css/queryWage.css" />
     <link rel="stylesheet" type="text/css" href="css/superManagement4.css" />
+    <link rel="stylesheet" type="text/css" href="css/dutyRegister.css" />
     <link rel="stylesheet" type="text/css" href="css/modal.css" />
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/notice.js"></script>
@@ -194,7 +195,8 @@
                 <li class="f14 float_l"><a href="jsp/superManagement13.jsp">公告管理</a></li>
             </ul>   
             <hr/>
-            <div class="queryWage superManagement4">
+            <div class="dutyRegister">
+            	<div class="button" style="margin:50px 0 20px 0;"><input type="button" value="+新增用户"  id="recommendedPlan-Button2"/></div>
             	<table id="tb_user">
                     <tr class="head"><td>账户名</td><td>部门</td><td>角色</td><td>操作</td></tr>
                     <%-- <c:forEach var="ul" items="${userList}" varStatus="status">
@@ -205,10 +207,6 @@
                     <a href="javascript:;" id="up">上一页</a>&frasl;
                     <a href="javascript:;" id="down">下一页</a>
                     <span id="pageCount">第1页，共1页</span>
-                </div>
-                <div class="superManagement16">
-                    <input type="button" value="添加账户" id="recommendedPlan-Button2"/>
-                    <input type="button" value="表格导入"/>
                 </div>
             </div>
         </div>	

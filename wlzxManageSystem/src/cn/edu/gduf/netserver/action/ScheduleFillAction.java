@@ -26,7 +26,7 @@ public class ScheduleFillAction implements Action{
 		}
 		IScheduleDao scheduleFillDao = new ScheduleDaoImpl();	
 		String freeTableID = request.getParameter("freeTableID");
-		int userID = ((User)request.getSession().getAttribute("currentUser")).getUserID();
+		int userID = (Integer) request.getSession().getAttribute("id");
 		
 		//System.out.println(((User)request.getSession().getAttribute("currentUser")).getUserID());  // 0
 		//System.out.println(freeTableID);

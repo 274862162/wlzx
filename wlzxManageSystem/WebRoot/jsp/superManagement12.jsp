@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/personInfo.css" />
 	<link rel="stylesheet" type="text/css" href="css/queryWage.css" />
     <link rel="stylesheet" type="text/css" href="css/superManagement4.css" />
-   <!--  <link rel="stylesheet" type="text/css" href="css/repairsManagement.css" /> -->
+   	<link rel="stylesheet" type="text/css" href="css/dutyRegister.css" />
     <link rel="stylesheet" type="text/css" href="css/analyze.css" />
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/notice.js"></script>
@@ -104,25 +104,19 @@
                 <br/>
                 <span class="f14">
                     <a href="jsp/superManagement10.jsp">楼栋管理 &nbsp;</a>
-                    <a href="jsp/superManagement11.jsp">用户管理 &nbsp;</a>
+                    <a href="jsp/superManagement11.jsp">学生管理 &nbsp;</a>
                     <a href="jsp/superManagement12.jsp" class="f_blue0066ff">统计分析</a>
                 </span>
             </ul>   
             <hr/>
-             <div class="superManagement4 analyze">
+             <div class="dutyRegister">
                <form>
-                    <!-- <span>根据:
-                    	<select class="item" id="type" style="height:24px">
-                        <option value="1">楼栋</option>
-                        <option value="2">维修人员</option>
-                        </select>
-					</span> -->
-                    <span>时间:<input type="date" name="startTime" id="startTime" placeholder="年/月/日" style="width:130px"/>
-                    -- <input type="date" name="endTime" id="endTime" placeholder="年/月/日" style="width:130px"/></span>
-                  	<span><input type="button" value="分析" id="analyze"></span>
-                    <!-- <span>维修人员:<input type="text" name="responsePerson"/></span> -->
-                   <!--  <div class="button"><input type="button" value="分析"></div> -->
-                    <!-- <img src="images/superManagement/superManegement23.png" alt="analyze" title="analyze"/> -->
+                    <!-- 搜索栏begin -->
+                    <div class="searchBar">
+                        <span>时间:<input type="date" name="startTime" id="startTime" placeholder="年/月/日"/><input type="date" name="endTime" id="endTime" placeholder="年/月/日"/></span>
+                        <span><input type="button" value="分析" id="analyze"></span>
+                    </div>
+                    <!-- 搜索栏end -->
                </form>
                <div style="margin-top:30px">
                		<canvas id="myChart" width="400" height="400"></canvas>

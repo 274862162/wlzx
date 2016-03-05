@@ -68,8 +68,8 @@
             <ul class="none_list_style_type" style="height:100%;">
             	<li><a href="jsp/superManagement1.jsp"><img alt="" src="images/superManagement/1.png"/><p>角色管理</p></a></li>
                 <li><a href="jsp/superManagement2.jsp"><img alt="" src="images/superManagement/2.png"/><p>设置角色</p></a></li>
-                <li><a href="jsp/superManagement3.jsp" class="active"><img alt="" src="images/superManagement/3.png"/><p>前台管理</p></a></li>
-                <li><a href="jsp/superManagement9.jsp"><img alt="" src="images/superManagement/4.png"/><p>后台管理</p></a></li>
+                <li><a href="jsp/superManagement3.jsp"><img alt="" src="images/superManagement/3.png"/><p>前台管理</p></a></li>
+                <li><a href="jsp/superManagement9.jsp" class="active"><img alt="" src="images/superManagement/4.png"/><p>后台管理</p></a></li>
             </ul>
         </div>
     	<!--左部菜单end-->
@@ -83,7 +83,12 @@
                 <li class="f14 float_l"><a href="jsp/superManagement13.jsp" class="f_blue0066ff">公告管理</a></li>
             </ul>   
             <hr/>
-            <div class="queryWage superManagement4  backAnnounce">
+            <ul class="section_list">
+    			<li class="jsb_item">技术部</li>
+    			<li class="zyb_item">资源部</li>
+    			<li class="zhb_item">综合部</li>
+    		</ul>
+    		<div class="queryWage superManagement4  backAnnounce">
             <form method="post" action=" ">
             	<table>
                     <tr class="head"><td colspan="2">发布公告</td></tr>
@@ -107,13 +112,10 @@
             </div>
         </div>	
     	<!--个人信息end-->
-    
     	<!-- 右侧公告 -->
         <notice:notice></notice:notice>
     </div>
 	<!--中部内容区end-->
-
-
 	<!-- 脚部 -->
     <foot:footer></foot:footer>
 </div>

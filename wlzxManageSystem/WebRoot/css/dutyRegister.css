@@ -71,3 +71,15 @@
 	margin-bottom:20px;
 }
 #allUser .dutyRegister .pn{margin-top:0;}
+.searchBar{position:absolute;top:124px;right:0px;color:#333;}
+.searchBar input[type="text"],.searchBar #startTime,.searchBar #endTime{
+	border:1px solid #ccc;height:36px;width:150px;line-height:36px;padding-left:8px;margin-left:10px;
+}
+.searchBar input[type="button"]{
+	width: 72px;
+	height: 38px;
+	color: #ffffff;
+	background-color: #fbb217;
+	border: none;
+	cursor: pointer;
+}

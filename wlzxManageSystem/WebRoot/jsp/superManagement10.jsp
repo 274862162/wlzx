@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/personInfo.css" />
 	<link rel="stylesheet" type="text/css" href="css/queryWage.css" />
     <link rel="stylesheet" type="text/css" href="css/superManagement4.css" />
+    <link rel="stylesheet" type="text/css" href="css/dutyRegister.css" />
     <link rel="stylesheet" type="text/css" href="css/modal.css" />
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/notice.js"></script>
@@ -190,26 +191,21 @@
                 <br/>
                 <span class="f14">
                     <a href="jsp/superManagement10.jsp" class="f_blue0066ff">楼栋管理 &nbsp;</a>
-                    <a href="jsp/superManagement11.jsp">用户管理 &nbsp;</a>
+                    <a href="jsp/superManagement11.jsp">学生管理 &nbsp;</a>
                     <a href="jsp/superManagement12.jsp">统计分析</a>
                 </span>
             </ul>   
             <hr/>
-            <div class="queryWage superManagement4">
+            <div class="dutyRegister">
+            <div class="button" style="margin:50px 0 20px 0;"><input type="button" value="+楼栋及负责人" id="recommendedPlan-Button2"/></div>
             	<table id="tb_area">
                     <tr class="head"><td>楼栋</td><td>负责人</td><td>操作</td></tr>
-                    <!-- <tr><td>23#A</td><td>谭毛女</td><td><a href="javascript:;" id="modifyButton">修改</a></td></tr>
-                    <tr><td>23#A</td><td>谭毛女</td><td><a href="javascript:;">修改</a></td></tr>
-                    <tr><td>23#A</td><td>谭毛女</td><td><a href="javascript:;">修改</a></td></tr>
-                    <tr><td>23#A</td><td>谭毛女</td><td><a href="javascript:;">修改</a></td></tr>
-                    <tr><td>23#A</td><td>谭毛女</td><td><a href="javascript:;">修改</a></td></tr> -->
                 </table>
                 <div class="changePage">
                     <a href="javascript:;" id="up">上一页</a>&frasl;
                     <a href="javascript:;" id="down">下一页</a>
                     <span id="pageCount">第1页，共1页</span>
                 </div>
-                <div class="button"><input type="button" value="添加楼栋及负责人" id="recommendedPlan-Button2"></div>
             </div>
         </div>	
     	<!--个人信息end-->

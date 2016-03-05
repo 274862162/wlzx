@@ -202,3 +202,12 @@
 	color:#fff!important;
 	height:34px!important;
 }
+.section_list{margin:44px auto auto auto;}
+.section_list li{width:33%;height:20px;list-style: none;float:left;margin-right:0!important;color:#666;font-size:14px;text-align:center;cursor: pointer;}
+.jsb_item{background-color: #ddd;}
+.zyb_item{background-color: #ccc;}
+.zhb_item{background-color: #bbb;}
+
+
+
+

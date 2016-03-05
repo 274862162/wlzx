@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="css/personInfo.css" />
 	<link rel="stylesheet" type="text/css" href="css/queryWage.css" />
     <link rel="stylesheet" type="text/css" href="css/superManagement4.css" />
+    <link rel="stylesheet" type="text/css" href="css/dutyRegister.css" />
     <link rel="stylesheet" type="text/css" href="css/modal.css" />
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/notice.js"></script>
@@ -125,7 +126,7 @@
 	 		   },
 	 		   success :function(result){  //请求成功时调用。 
 	 		   		$("#tb_student").children($("<tr>")).remove();
-	 		   		$("#tb_student").append('<tr class="head"><td>用户名</td><td>用户姓名</td><td>操作</td></tr>');
+	 		   		$("#tb_student").append('<tr class="head"><td>学号</td><td>姓名</td><td>操作</td></tr>');
 	 		   		$.each(result,function(){
 		 			    $.each(this.list,function(){
 		 			    	$("#tb_student").append('\
@@ -200,37 +201,29 @@
                 <br/>
                 <span class="f14">
                     <a href="jsp/superManagement10.jsp">楼栋管理 &nbsp;</a>
-                    <a href="jsp/superManagement11.jsp" class="f_blue0066ff">用户管理 &nbsp;</a>
+                    <a href="jsp/superManagement11.jsp" class="f_blue0066ff">学生管理 &nbsp;</a>
                     <a href="jsp/superManagement12.jsp">统计分析</a>
                 </span>
             </ul>   
             <hr/>
-            <div class="queryWage superManagement4">
+            <div class="dutyRegister">
                 <form name="userManage" method="post" action="">
                     <!-- 搜索栏begin -->
-                    <div class="searchBar" style="margin-top:20px">
-                        <span>用户名<input type="text" name="sno" id="searchSno" /></span>
-                        <span>用户姓名<input type="text" name="name" id="searchName"/></span>
+                    <div class="searchBar">
+                        <span>学号<input type="text" name="sno" id="searchSno" /></span>
+                        <span>姓名<input type="text" name="name" id="searchName"/></span>
                         <span><input type="button" value="搜索" class="searchButton" id="query" /></span>
                     </div>
                     <!-- 搜索栏end -->
+                    <div class="button" style="margin:50px 0 20px 0;"><input type="button" value="+新增学生用户" id="recommendedPlan-Button2"/></div>
                     <table id="tb_student">
-                    	<tr class="head"><td>用户名</td><td>用户姓名</td><td>操作</td></tr>
-	                    <!-- <tr><td>121542227</td><td>谭毛女</td><td>******</td><td><a href="javascript:;">删除</a>&frasl;<a href="javascript:;" id="modifyButton">修改</a></td></tr>
-	                    <tr><td>121542227</td><td>谭毛女</td><td>******</td><td><a href="javascript:;">删除</a>&frasl;<a href="javascript:;">修改</a></td></tr>
-	                    <tr><td>121542227</td><td>谭毛女</td><td>******</td><td><a href="javascript:;">删除</a>&frasl;<a href="javascript:;">修改</a></td></tr>
-	                    <tr><td>121542227</td><td>谭毛女</td><td>******</td><td><a href="javascript:;">删除</a>&frasl;<a href="javascript:;">修改</a></td></tr>
-	                    <tr><td>121542227</td><td>谭毛女</td><td>******</td><td><a href="javascript:;">删除</a>&frasl;<a href="javascript:;">修改</a></td></tr> -->
+                    	<tr class="head"><td>学号</td><td>姓名</td><td>操作</td></tr>
                     </table>
                     <div class="changePage">
                     <a href="javascript:;" id="up">上一页</a>&frasl;
                     <a href="javascript:;" id="down">下一页</a>
                     <span id="pageCount">第1页，共1页</span>
                 </div>
-                    <div class="superManagement16">
-                        <input type="button" value="添加账户"  id="recommendedPlan-Button2"/>
-                        <input type="button" value="表格导入"/>
-                    </div>
                 </form>
             	
             </div>
@@ -253,8 +246,8 @@
             <form name="superManagement9Form" method="post" action="CommonServlet_forward?action=updateStudent">
                 <div class="queryWage superManagement4 superManagement7 superManagement8Modal">
                     <table>
-                    <tr><td>用户名</td><td id="sno"></td></tr>
-                    <tr><td>用户姓名</td><td><input id="name" type="text" name="name" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
+                    <tr><td>学号</td><td id="sno"></td></tr>
+                    <tr><td>姓名</td><td><input id="name" type="text" name="name" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
                     <tr><td width="500" style="width: 200px !important;">密码</td><td><input type="password" name="password" id="password"  style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit" /></td></tr>
                     <tr><td width="500">确认密码</td><td><input type="password" name="repassword" id="repassword" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
                     </table>
@@ -276,8 +269,8 @@
             <form name="superManagement9Form" method="post" action="CommonServlet_forward?action=addStudent">
                 <div class="queryWage superManagement4 superManagement7 superManagement8Modal">
                     <table>
-                    <tr><td>用户名</td><td><input type="text" name="sno" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
-                    <tr><td>用户姓名</td><td><input type="text" name="name" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
+                    <tr><td>学号</td><td><input type="text" name="sno" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
+                    <tr><td>姓名</td><td><input type="text" name="name" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
                     <tr><td width="500" style="width: 200px !important;">密码</td><td><input type="password" name="password" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit" /></td></tr>
                     <tr><td width="500">确认密码</td><td><input type="password" name="repassword" style="border: none;width: 400px;height: 46px;text-align:center;background-color: inherit"/></td></tr>
                     </table>
