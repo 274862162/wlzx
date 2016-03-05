@@ -18,17 +18,16 @@ public class NoticeDao implements INoticeDao {
 
 	public int addNotice(Notice notice) throws SQLException {
 		int i = 0;	//影响的条数
-		sql= new StringBuffer("INSERT INTO notice(content,department,operator,createTime) VALUES(?,?,?,?)");
+		sql= new StringBuffer("update notice set content=?,createTime=?,operator=? where department=?;");
 		java.util.Date fillTime=new java.util.Date();//获得当前时间
 		try{
 			conn = DbUtil.getCon();
 			pstmt = conn.prepareStatement(sql.toString());
 			pstmt.setString(1, notice.getContent());
-			pstmt.setString(2, notice.getDepartment());
+			pstmt.setTimestamp(2,new java.sql.Timestamp(fillTime.getTime()));
 			pstmt.setString(3, notice.getOperator());
-			pstmt.setTimestamp(4,new java.sql.Timestamp(fillTime.getTime()));			
+			pstmt.setString(4, notice.getDepartment());
 			i = pstmt.executeUpdate();
-			System.out.println(i);
 		}catch(SQLException e){
 			e.printStackTrace();
 		}finally{

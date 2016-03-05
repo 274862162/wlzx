@@ -28,13 +28,50 @@
     <script type="text/javascript" src="js/b_utils.js"></script>
 	<script type="text/javascript">
     $(function(){
+    	var dep="技术部";
+    	initContent(dep);
+    	$(".jsb_item").click(function(){
+    		dep="技术部";
+    		$("#nitice_title>em").html("技术部");
+    		initContent(dep);
+    	});
+    	$(".zyb_item").click(function(){
+    		dep="资源部";
+    		$("#nitice_title>em").html("资源部");
+    		initContent(dep);
+    	});
+    	$(".zhb_item").click(function(){
+    		dep="综合部";
+    		$("#nitice_title>em").html("综合部");
+    		initContent(dep);
+    	});
 		$("#addNotice").click(function(){
-			addNotice();
+			addNotice(dep);
 		});
-    	function addNotice(){
+		//显示公告内容
+    	function initContent(section){
+			var param={};
+			param.department = section;
+			$.ajax({
+		 		   url  : "GetNotice",  
+		 		   data : param,
+		 		   type : "post",                  
+		 		   cache: false,
+		 		   dataType:"json", 
+		 		   error : function(x, er){
+		 			    //请求失败时调用	
+		 			    alert("请求失败"); 
+		 		   },
+		 		   success :function(result){  //请求成功时调用。 
+		 			  text = result.content;
+		 			  $("#notice").val(text);
+		 		   }
+			});
+		}
+    	function addNotice(section){
 			var param = {};
 			param["content"] = $("#notice").val();
-			param["department"] = $("#department").val();
+			param["department"] = section;
 			$.ajax({
 			   url  : "CommonServlet_ajax?action=addNotice",  
 			   data : param,
@@ -53,8 +90,6 @@
     });
     </script>
 </head>
-
-
 <body style="height:100%;">
 <!--整体包围-->
 <div class="wrapper margin0_auto" style="height:100%;">
@@ -88,28 +123,11 @@
     			<li class="zyb_item">资源部</li>
     			<li class="zhb_item">综合部</li>
     		</ul>
-    		<div class="queryWage superManagement4  backAnnounce">
-            <form method="post" action=" ">
-            	<table>
-                    <tr class="head"><td colspan="2">发布公告</td></tr>
-                    <tr>
-                        <td>部门</td>
-                        <td>
-                            <select name="department" id="department">
-                                <option name="null">请选择</option>
-                                <option name="jsb">技术部</option>
-                                <option name="zyb">资源部</option>
-                                <option name="zhb">综合部</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr><td colspan="2"><textarea name="content" id="notice"></textarea></td></tr>
-                </table>
-                <div class="superManagement16">
-                    <input type="button" value="发布" id="addNotice"/>
-                </div>
-                </form>
-            </div>
+    		<div class="noti_content">
+    			<p id="nitice_title">发布<em>技术部</em>公告</p>
+    			<textarea placeholder="最长不得超过1000字符" name="content" id="notice" maxlength="1000"></textarea>
+    			<div class="button" style="margin-top:20px;"><input type="button" value="发布" id="addNotice"/></div>
+    		</div>
         </div>	
     	<!--个人信息end-->
     	<!-- 右侧公告 -->

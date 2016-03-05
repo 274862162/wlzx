@@ -134,7 +134,7 @@ a:hover{
 	height: 60px;
 	cursor: pointer;
 	background-color:#fff;
-	border-bottom: 1px #ccc solid;
+	border: 1px #ccc solid;
 	padding-left: 18px;
 }
 
@@ -157,8 +157,11 @@ a:hover{
 }
 
 .notice_content p{
-	color: #999999;
-	padding: 20px 40px;
+	color: #666;
+	padding: 10px;
+	height:180px;
+	overflow-y: auto;
+	font-size:14px;
 }
 /*翻页*/
 .changePage span{
