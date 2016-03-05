@@ -144,6 +144,7 @@ public class UserDao {
 		sql.append(" where Id="+user.getUserID());
 		try{
 			conn= DbUtil.getCon();
+			System.out.println("查询语句"+sql);
 			pstmt = conn.prepareStatement(sql.toString());
 			if(pstmt.executeUpdate()==0){
 				b=false;
@@ -157,24 +158,36 @@ public class UserDao {
 		}
 		return b;
 	}
-/*	//更新用户信息的方法
+//更新用户信息的方法
 		public boolean updateBasicInfoToUser(User user){
 			conn = null;
 			pstmt = null;
 			boolean b = true;
 			try{
 				conn= DbUtil.getCon();
-				pstmt = conn.prepareStatement("update user set age=?,dormitory=?,longTelephone=?,shortTelephone=?,interests=?,major=?,name=?,sno=? where userName=?");
-				pstmt.setInt(1,user.getAge());
-				pstmt.setString(2,user.getDormitory());
-				pstmt.setString(3,user.getLongTelephone());
-				pstmt.setString(4,user.getShortTelephone());
-				pstmt.setString(5,user.getInterests());
-				pstmt.setString(6,user.getMajor());
-				pstmt.setString(7,user.getName());
-				pstmt.setString(8, user.getSno());
-				pstmt.setString(9,user.getUserName());
-				
+				if(user.getSex()!=null){
+					pstmt = conn.prepareStatement("update user set age=?,dormitory=?,longTelephone=?,shortTelephone=?,major=?,name=?,sno=?,sex=? where userName=?");
+					pstmt.setInt(1,user.getAge());
+					pstmt.setString(2,user.getDormitory());
+					pstmt.setString(3,user.getLongTelephone());
+					pstmt.setString(4,user.getShortTelephone());
+					pstmt.setString(5,user.getMajor());
+					pstmt.setString(6,user.getName());
+					pstmt.setString(7, user.getSno());
+					pstmt.setString(8, user.getSex());
+					pstmt.setString(9,user.getUserName());
+				}else{
+					pstmt = conn.prepareStatement("update user set age=?,dormitory=?,longTelephone=?,shortTelephone=?,major=?,name=?,sno=? where userName=?");
+					pstmt.setInt(1,user.getAge());
+					pstmt.setString(2,user.getDormitory());
+					pstmt.setString(3,user.getLongTelephone());
+					pstmt.setString(4,user.getShortTelephone());
+					pstmt.setString(5,user.getMajor());
+					pstmt.setString(6,user.getName());
+					pstmt.setString(7, user.getSno());
+					pstmt.setString(8,user.getUserName());
+				}
+				pstmt.executeUpdate();
 				pstmt.close();
 				conn.close();
 			}catch(Exception e){
@@ -182,7 +195,7 @@ public class UserDao {
 				b=false;
 			}
 			return b;
-		}*/
+		}
 	//修改密码的方法
 	public String changePassword(String userName,String password,String newPassword){
 		conn = null;
@@ -236,7 +249,7 @@ public class UserDao {
 		}
 		return ID;
 	}
-	//查询个人信息
+	//查询个人信息，以楼栋为条件
 	public User getPersonInfo(int userID){
 		User user = new User();
 		conn = null;
@@ -266,6 +279,39 @@ public class UserDao {
 			if(rs.next()){
 				user.setRepArea(rs.getString("areaName"));
 			}*/
+			pstmt.close();
+			conn.close();
+		}catch(Exception e){
+			e.printStackTrace();
+			System.out.print("查询失败。");
+		}
+		return user;
+	}
+	//查询个人信息
+	public User getPersonInfoByID(int userID){
+		User user = new User();
+		conn = null;
+		rs = null;
+		pstmt = null;
+		try{
+			conn= DbUtil.getCon();
+			pstmt = conn.prepareStatement("select userName,name,sno,age,dormitory,sex,repArea,section,major,longTelephone,shortTelephone,interests from user where Id=?");
+			pstmt.setInt(1,userID);
+			rs=pstmt.executeQuery();
+			if(rs.next()){
+				user.setUserName(rs.getString(1));
+				user.setSno(rs.getString(2));
+				user.setName(rs.getString(3));
+				user.setDormitory(rs.getString(4));
+				user.setAge(rs.getInt(5));
+				user.setSex(rs.getString(6));
+				user.setRepArea(rs.getString(7));
+				user.setSection(rs.getString(8));
+				user.setMajor(rs.getString(9));
+				user.setLongTelephone(rs.getString(10));
+				user.setShortTelephone(rs.getString(11));
+				user.setInterests(rs.getString(12));
+			}
 			pstmt.close();
 			conn.close();
 		}catch(Exception e){

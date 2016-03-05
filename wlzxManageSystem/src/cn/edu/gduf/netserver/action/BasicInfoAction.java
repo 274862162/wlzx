@@ -52,6 +52,7 @@ public class BasicInfoAction implements Action {
 		}
 		if(sno!=null&name!=null&address!=null&tel!=null&major!=null&shortTel!=null){	
 			//设置实体类内容
+			user.setUserID((Integer)request.getSession().getAttribute("id"));
 			user.setUserName(userName);
 			user.setSno(sno);
 			user.setName(name);
@@ -62,7 +63,7 @@ public class BasicInfoAction implements Action {
 			user.setShortTelephone(shortTel);
 			user.setMajor(major);
 			//调用Userdao的更新信息方法
-			boolean isUpdate=userDao.updateUser(user);
+			boolean isUpdate=userDao.updateBasicInfoToUser(user);
 			if(isUpdate){
 				web = "jsp/finishInfo.jsp";//如果填写成功，跳到下一页
 			}else{

@@ -299,6 +299,7 @@ public class UserDaoImpl implements IUserDao{
 				user.setShortTelephone(rs.getString("shortTelephone"));
 				user.setSection(rs.getString("section"));
 				user.setRepArea(rs.getString("repArea"));
+				user.setDutyTime(rs.getString("dutyTime"));
 				userList.add(user);
 			}
 		} catch (SQLException e) {

@@ -100,7 +100,7 @@
 		 	   },
 		 	   success :function(result){  //请求成功时调用。 
 		 	   		$("#tb_dutyRegister").children($("<tr>")).remove();
-		 	   		$("#tb_dutyRegister").append('<tr class="head"><td>用户名</td><td>学号</td><td>姓名</td><td>专业</td><td>住址</td><td>联系方式</td><td>部门</td><td>负责楼栋</td><td>操作</td></tr>');
+		 	   		$("#tb_dutyRegister").append('<tr class="head"><td>用户名</td><td>学号</td><td>姓名</td><td>专业</td><td>住址</td><td>联系方式</td><td>部门</td><td>负责楼栋</td><td>值班时间</td></tr>');
 		 	   		$.each(result,function(){
 					    $.each(this.list,function(){
 					    	$("#tb_dutyRegister").append('\
@@ -112,9 +112,7 @@
 			 			   	<td>'+this.longTelephone+'  '+this.shortTelephone+'</td>\
 			 			   	<td>'+this.section+'</td>\
 			 			   	<td>'+this.repArea+'</td>\
-                            <td><a href="javascript:checkDutyRegister('+this.userID+');" id="checkButton"><img src="images/dutyRegister/check.png" title="查看" alt="查看"/></a>\
-                            <a href="javascript:dealingDutyRegister('+this.userID+');" id="checkButton"><img src="images/dutyRegister/handle.png" title="设置" alt="设置"/></a>\
-                            <a href="javascript:dealingDutyRegister('+this.userID+');" id="checkButton"><img src="images/dutyRegister/del.png" title="删除" alt="删除"/></a></td>');
+                            <td>'+this.dutyTime+'</td></tr>');
 			 			   	});
 			 			//page = this.page;
 			 			totalPage = this.totalPage;
@@ -212,9 +210,8 @@
             </ul>
             <hr/>
             <div id="allUser">
-	            <div class="button"><input type="button" value="+新增用户" onClick="" /></div>
 	            <div class="dutyRegister">
-	                <div class="pn">
+	                <div class="pn" style="margin-top:46px;">
 	                <a href="javascript:;" id="firstPage"><img src="images/dutyRegister/first.png" alt="第一页" title="第一页"/></a>
 	                <a href="javascript:;" id="up"><img src="images/dutyRegister/previous.png" alt="上一页" title="上一页"/></a>&nbsp;&nbsp;&nbsp;
 	                <a href="javascript:;" id="down"><img src="images/dutyRegister/next.png" alt="下一页" title="下一页"/></a>

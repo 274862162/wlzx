@@ -28,7 +28,8 @@ public class PersonInfoAction implements Action {
 		String option = request.getParameter("option");//判断处理类型
 		//如果是查看
 		if(option.equals("check")){
-			user = userDao.getPersonInfo(userID);
+			user = userDao.getPersonInfoByID(userID);
+			System.out.println("userID:"+user.getUserID()+"name:"+user.getName());
 			request.setAttribute("user",user);
 			//return "jsp/personInfo.jsp";
 			
@@ -84,13 +85,13 @@ public class PersonInfoAction implements Action {
 			user.setMajor(major);
 			user.setLongTelephone(longPhone);
 			user.setShortTelephone(shortPhone);
-			if(userDao.updateUser(user)){
+			if(userDao.updateBasicInfoToUser(user)){
 				request.setAttribute("message", "修改成功");
 			}else{
 				request.setAttribute("message", "修改失败");
 			}
 			//取更新之后的信息
-			user = userDao.getPersonInfo(userID);
+			user = userDao.getPersonInfoByID(userID);
 			request.setAttribute("user",user);
 		}else{
 			//return "jsp/dutyRegister.jsp";
