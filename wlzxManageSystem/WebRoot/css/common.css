@@ -15,7 +15,7 @@ a:hover{
 .header .logo{
 	float:left;
 }
-.header .check,.header .message{
+.header .check,.header .message,.header .exit{
 	float:right;
 	display:inline-block;
 	margin-right:10px;
@@ -34,7 +34,14 @@ a:hover{
 .check a:hover{
 	background: url("../images/firstTime/bcheck.jpg") no-repeat;
 }
-
+.exit a{
+	width: 82px;
+	height: 82px;
+	background: url("../images/firstTime/exit.jpg") no-repeat;
+}
+.exit a:hover{
+	background: url("../images/firstTime/bexit.jpg") no-repeat;
+}
 .message a{
 	width: 82px;
 	height: 82px;

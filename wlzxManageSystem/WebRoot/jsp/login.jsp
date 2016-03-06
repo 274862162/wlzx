@@ -4,7 +4,7 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="notice" %>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="foot" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html style="height: 100%;">
 <head>
     <!-- The site is designed by 网络中心.Written by tmn-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -36,19 +36,21 @@
 </head>
 
 
-<body>
+<body style="height: 100%;">
 <!--整体包围-->
-<div class="wrapper margin0_auto">
+<div class="wrapper margin0_auto" style="height: 100%;">
 
 	<!--中部内容区begin-->
 	<div class="content margin0_auto f14">
-		<img src="images/login/hw.png"/>
-		<form method="post" action="CommonServlet_redirect?action=login" id="login_form">
-			<input class="user inputText validate[required,minSize[4]] text-input" type="text" name="userName" id="user_text"/>
-			<br/>
-			<input class="password inputText validate[required] text-input" type="password" name="password" id="psw_text"/>
-			<div class="login"><input type="submit" value="登录"/></div>
-		</form>
+		<div class="input_bg">
+			<p class="login_title">学生网络中心后台管理系统</p>
+			<form method="post" action="CommonServlet_redirect?action=login" id="login_form">
+				<input class="user inputText validate[required,minSize[4]] text-input" type="text" name="userName" id="user_text"/>
+				<br/>
+				<input class="password inputText validate[required] text-input" type="password" name="password" id="psw_text"/>
+				<div class="login"><input type="submit" value="登录"/></div>
+			</form>
+		</div>
 	</div>
 	<!--中部内容区end-->
 
